@@ -1,4 +1,4 @@
-public class FlightBooking implements Booking{
+public class FlightBooking extends Booking{
     private Estimate estimate;
     private Schedule schedule;
 
@@ -16,7 +16,7 @@ public class FlightBooking implements Booking{
     }
 
     @Override
-    public void receiveRequest() {
+    public void receiveRequest(Estimate estimate, Schedule schedule) {
 
     }
 
