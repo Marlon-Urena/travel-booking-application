@@ -1,4 +1,4 @@
-public class HotelBooking implements Booking {
+public class HotelBooking extends Booking {
 
     private Estimate estimate;
     private Schedule schedule;
