@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class TravelerAccount {
     private String firstName;
-    private String middleName;
     private String lastName;
     private String addressLine1;
     private String addressLine2;
@@ -29,6 +28,16 @@ public class TravelerAccount {
         return this.email + " " + this.password;
     }
 
+    public static boolean isNewTravelerAccountValid(String email, String password) {
+
+        EmailValidator validator= EmailValidator.getInstance();
+
+        if (validator.isValid(email) && password.matches(pattern)) {
+            //I changed this so the  new travelerAccount is being declared in the TravelProgram because the travel program was remaining null not matter what I did
+            return true;
+        }
+        return false;
+    }
     public void changePassword(String password) {
         //have code here that will determine if password is valid(maybe based on whether it has appropriate characters and length
         this.password=password;
@@ -39,7 +48,7 @@ public class TravelerAccount {
         this.email=email;
     }
 
-    public void changedateOfBirth(Date dateOfBirth) {
+    public void changeDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -47,23 +56,38 @@ public class TravelerAccount {
         return email;
     }
 
-
     public static TravelerAccount login(Database dataBase, String email, String password) throws Exception {
         return dataBase.loginToTravelerAccount(email + " " + password);
     }
 
-    public static boolean createNewTravelerAccount(TravelerAccount travelerAccount, Database database, String email, String password) {
-        boolean validEmail = false;
-        boolean validPassword = false;
-        EmailValidator validator= EmailValidator.getInstance();
+    //Add the getters and rest of setters
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
 
-        if (validator.isValid(email) && password.matches(pattern)) {
-            travelerAccount = new TravelerAccount(email, password);
-            database.addNewTravelerAccount(travelerAccount);
-            return true;
-        }
-        return false;
     }
 
-    //Add the getters and rest of setters
+    public void setLastName(String lastName){
+        this.lastName = lastName;
+    }
+
+    public void setAddressLine1(String address){
+        this.addressLine1 = address;
+    }
+
+    public void setCity(String city){
+        this.city = city;
+    }
+
+    public void setState(String state){
+        this.state = state;
+    }
+
+    public void setZipCode(String zipCode){
+        this.zipCode = zipCode;
+    }
+
+    public void setDateOfBirth(Date dob){
+        this.dateOfBirth = dob;
+    }
 }
+
