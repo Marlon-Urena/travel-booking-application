@@ -1,18 +1,15 @@
 import org.apache.commons.validator.routines.EmailValidator;
-
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class TravelProgram {
-    private static final int FLIGHT_BOOKING = 1;
-    private static final int CAR_RENTAL_BOOKING = 2;
-    private static final int HOTEL_BOOKING = 3;
-    private static final int TRAIN_BOOKING = 4;
-    private static final int SEARCH_OLD_BOOKING = 5;
-    private static final int CHANGE_ACCOUNT_INFORMATION = 6;
-    private static final int LOG_OUT = 7;
-    private static final int EXIT = 8;
+    private static final int CREATE_BOOKING = 1;
+    private static final int SEARCH_BOOKING = 2;
+    private static final int CHANGE_INFO = 3;
+    private static final int LOG_OUT = 4;
+    private static final int EXIT = 4;
 
-    public static void main(String [] args) {
+    public static void main(String [] args) throws ParseException {
         Traveler traveler= new Traveler();
         TravelerAccount travelerAccount=null;
         Database database= new Database();
@@ -29,59 +26,54 @@ public class TravelProgram {
         Scanner scanner = new Scanner(System.in);
 
             int selection;
+            System.out.println("Hello! \nWould you like to \n 1. Login \n 2. Make a new account ");
+            selection = scanner.nextInt();
+            scanner.nextLine();
             do {
                 while (!signedIn) {
-
-                    System.out.println("Would you like to \n 1. Make a new Account \n 2. Login ");
-                    selection = scanner.nextInt();
 
                     if (selection == 1) {
                         traveler.login(loginToTravelerAccount(travelerAccount, database, scanner));
                         signedIn = true;
-                    }
-                    else if (selection == 2) {
-                        createNewTravelerAccount(travelerAccount,database, scanner);
+                    } else if (selection == 2) {
+                        travelerAccount = createNewTravelerAccount(travelerAccount, database, scanner);
+                        traveler.setAccountInfo(travelerAccount);
+                        traveler.login(loginToTravelerAccount(travelerAccount, database, scanner));
+                        signedIn = true;
                     }
                 }
 
                 selection = displayMenu(scanner);
 
                 switch (selection) { //May change listing to just have makeBooking call the booking types
-                    case FLIGHT_BOOKING:
-                        displayFlightBookingMenu(scanner, traveler);
+                    case CREATE_BOOKING:
+                        //displayFlightBookingMenu(scanner, traveler);
                         break;
-                    case CAR_RENTAL_BOOKING:
-                        displayCarRentalMenu(scanner, traveler);
+                    case SEARCH_BOOKING:{
+                        System.out.println("Enter booking number: ");
+                        String bookingNum = scanner.nextLine();
+                        traveler.retrieveBookingInfo(database, bookingNum);
+                    }
                         break;
-                    case HOTEL_BOOKING:
-                        displayHotelBookingMenu(scanner, traveler);
+                    case CHANGE_INFO:
+                        traveler.changeAccountInfo(travelerAccount);
                         break;
-                    case TRAIN_BOOKING:
-                        displayTrainBookingMenu(scanner, traveler);
-                        break;
-                    case SEARCH_OLD_BOOKING:
-                        displayTravelerBookingSearchMenu(scanner, traveler);
-                        break;
-                    case CHANGE_ACCOUNT_INFORMATION:
-                        displayAccountInformationMenu(scanner, traveler);
-                        break;
-                    case LOG_OUT:
-                        traveler= logOut();
-
+                    case LOG_OUT: {
+                        traveler = logOut();
+                    }
                     default:
                         selection = EXIT;
                 }
             } while (selection != EXIT);
     }
+
     public static int displayMenu(Scanner scanner) {
         System.out.println("**********************************");
         System.out.println("MENU: ");
-        System.out.println("\t1. Add a new word/definition");
-        System.out.println("\t2. Get a definition");
-        System.out.println("\t3. Get the entry count");
-        System.out.println("\t4. Load the dictionary file");
-        System.out.println("\t5. Save the dictionary file");
-        System.out.println("\t6. Quit");
+        System.out.println("\t1. Create a new Booking");
+        System.out.println("\t2. Search an old Booking");
+        System.out.println("\t3. Change account Info");
+        System.out.println("\t4. Log Out");
         System.out.println("**********************************");
         System.out.print("\nEnter your selection: ");
 
@@ -138,15 +130,13 @@ public class TravelProgram {
 
         boolean validEntry =false;
 
-        System.out.println("*********************");
+        System.out.println("\n*********************");
         System.out.println("Login");
         System.out.println("*********************");
         System.out.println();
         do {
             System.out.print("\tEmail: ");
             email = scanner.nextLine();
-
-            System.out.println();
 
             System.out.print("\tPassword: ");
             password = scanner.nextLine();
@@ -164,7 +154,7 @@ public class TravelProgram {
         return travelerAccount;
     }
 
-    public static void createNewTravelerAccount(TravelerAccount travelerAccount, Database database, Scanner scanner) {
+    public static TravelerAccount createNewTravelerAccount(TravelerAccount travelerAccount, Database database, Scanner scanner) {
         String email;
         String password;
         String confirmationPassword;
@@ -185,13 +175,16 @@ public class TravelProgram {
             confirmationPassword = scanner.nextLine();
 
             if(password.equals(confirmationPassword)) {
-                if (validAccountDetails = travelerAccount.createNewTravelerAccount(travelerAccount, database, email, password)) {
-                    System.out.println("\tSuccess");
+                if (validAccountDetails = travelerAccount.isNewTravelerAccountValid(email, password)) {
+                    travelerAccount = new TravelerAccount(email, password);
+                    database.addNewTravelerAccount(travelerAccount);
+                    System.out.println("\tSuccess\n");
                 }
             }
             else {
                 System.out.println ("Password does not match. Please try again");
             }
         }while(!validAccountDetails);
+    return  travelerAccount;
     }
 }
