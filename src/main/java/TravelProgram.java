@@ -1,4 +1,3 @@
-import org.apache.commons.validator.routines.EmailValidator;
 import java.text.ParseException;
 import java.util.Scanner;
 
@@ -15,12 +14,15 @@ public class TravelProgram {
         Database database= new Database();
 
         Schedule schedule = new Schedule();
-        Estimate estimate = new Estimate();
+
+        Budget budget = new Budget();
+        Estimate estimate = new Estimate(budget);
 
         Booking flightBooking = new FlightBooking(estimate, schedule);
         Booking hotelBooking = new HotelBooking(estimate, schedule);
         Booking carRentalBooking = new CarRentalBooking(estimate, schedule);
         Booking trainBooking = new TrainBooking(estimate, schedule);
+
         boolean signedIn = false;
 
         Scanner scanner = new Scanner(System.in);
@@ -46,8 +48,14 @@ public class TravelProgram {
                 selection = displayMenu(scanner);
 
                 switch (selection) { //May change listing to just have makeBooking call the booking types
-                    case CREATE_BOOKING:
-                        //displayFlightBookingMenu(scanner, traveler);
+                    case CREATE_BOOKING:{
+                        System.out.print("Set budget for your trip: ");
+                        double tripBudget = scanner.nextInt();
+                        traveler.setBudget(budget, tripBudget);
+                        
+                        displayBookingMenu(scanner, traveler);
+                    }
+
                         break;
                     case SEARCH_BOOKING:{
                         System.out.println("Enter booking number: ");
@@ -95,6 +103,19 @@ public class TravelProgram {
 
     }
 
+    public static void displayBookingMenu(Scanner scanner, Traveler traveler){
+        System.out.println("*********************");
+        System.out.println("Booking Menu");
+        System.out.println("*********************");
+
+        System.out.println("\t1. Book a flight");
+        System.out.println("\t2. Rent a car");
+        System.out.println("\t3. Book a hotel");
+        System.out.println("\t4. Book a train ticket");
+        System.out.println("\t5. Estimate");
+
+    }
+
     public static void displayFlightBookingMenu(Scanner scanner, Traveler traveler) {
 
     }
@@ -110,11 +131,6 @@ public class TravelProgram {
     public static void displayTrainBookingMenu(Scanner scanner, Traveler traveler) {
 
     }
-
-    public static void displayTravelerBookingSearchMenu(Scanner scannner, Traveler traveler) {
-
-    }
-
     public static void displayAccountInformationMenu(Scanner scanner, Traveler traveler) {
 
     }
