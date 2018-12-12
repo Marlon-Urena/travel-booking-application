@@ -1,3 +1,6 @@
+import org.apache.commons.validator.routines.EmailValidator;
+
+import java.awt.print.Book;
 import java.text.ParseException;
 import java.util.Scanner;
 
@@ -52,8 +55,8 @@ public class TravelProgram {
                         System.out.print("Set budget for your trip: ");
                         double tripBudget = scanner.nextInt();
                         traveler.setBudget(budget, tripBudget);
-                        
-                        displayBookingMenu(scanner, traveler);
+
+                        displayBookingMenu(scanner, traveler, flightBooking, estimate);
                     }
 
                         break;
@@ -77,7 +80,7 @@ public class TravelProgram {
 
     public static int displayMenu(Scanner scanner) {
         System.out.println("**********************************");
-        System.out.println("MENU: ");
+        System.out.println("MAIN MENU: ");
         System.out.println("\t1. Create a new Booking");
         System.out.println("\t2. Search an old Booking");
         System.out.println("\t3. Change account Info");
@@ -103,34 +106,38 @@ public class TravelProgram {
 
     }
 
-    public static void displayBookingMenu(Scanner scanner, Traveler traveler){
-        System.out.println("*********************");
-        System.out.println("Booking Menu");
-        System.out.println("*********************");
+    public static void displayBookingMenu(Scanner scanner, Traveler traveler, Booking booking, Estimate estimate){
+        boolean EXIT = false; 
+        do {
+            System.out.println("*********************");
+            System.out.println("BOOKING MENU: ");
+            System.out.println("*********************");
 
-        System.out.println("\t1. Book a flight");
-        System.out.println("\t2. Rent a car");
-        System.out.println("\t3. Book a hotel");
-        System.out.println("\t4. Book a train ticket");
-        System.out.println("\t5. Estimate");
+            System.out.println("\t1. Book a flight");
+            System.out.println("\t2. Rent a car");
+            System.out.println("\t3. Book a hotel");
+            System.out.println("\t4. Book a train ticket");
+            System.out.println("\t5. Add activity to schedule");
+            System.out.println("\t6. Estimate trip cost");
+            System.out.println("\t7. Back to Main Menu");
+            
+            int response = scanner.nextInt();
+            
+            if(response == 1){}
+            else if(response == 2){}
+            else if(response == 3){}
+            else if(response == 4){}
+            else if(response == 5){}
+            else if(response == 6){System.out.println(estimate.provideEstimate());}
+            else if(response == 7){EXIT = true;}
+            else
+                System.out.println("Error: try again");
 
+        }while(!EXIT);
+        
     }
 
-    public static void displayFlightBookingMenu(Scanner scanner, Traveler traveler) {
-
-    }
-
-    public static void displayCarRentalMenu(Scanner scanner, Traveler traveler) {
-
-    }
-
-    public static void displayHotelBookingMenu(Scanner scanner, Traveler traveler) {
-
-    }
-
-    public static void displayTrainBookingMenu(Scanner scanner, Traveler traveler) {
-
-    }
+   
     public static void displayAccountInformationMenu(Scanner scanner, Traveler traveler) {
 
     }
@@ -204,3 +211,4 @@ public class TravelProgram {
     return  travelerAccount;
     }
 }
+
