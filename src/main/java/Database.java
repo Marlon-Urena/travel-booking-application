@@ -50,5 +50,7 @@ public class Database {
         bookingMap.put(bookingNumber, bookingFile);
     }
 
-
+    public File searchOldBookingData(String bookingNumber){
+        return bookingMap.get(bookingNumber);
+    }
 }
