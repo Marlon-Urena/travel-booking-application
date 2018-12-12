@@ -11,17 +11,32 @@ import java.util.Scanner;
         private String Login;
         private Database database;
 
-        public void makeRequest(Booking booking) {
+       public void makeRequest(Booking booking) {
             Scanner scan = new Scanner(System.in);
 
             System.out.println("Enter your destination: ");
             String destination = scan.next();
 
-            //Find Flight info based on the destination
-
             System.out.println("How long would you like the trip to last? ");
             int lengthOfTrip = scan.nextInt();
             schedule.setLengthOfTrip(lengthOfTrip);
+        }
+
+        public void addActivityToSchedule(Activity activity, Estimate estimate){
+            System.out.print("Pick an Activity: ");
+            activity.printActivityList();
+
+            Scanner scan = new Scanner(System.in);
+            int activityNumber = scan.nextInt();
+
+            System.out.print("Enter the number day you would like to do activty: ");
+            int day = scan.nextInt();
+
+
+            if(estimate.addToTotalCost(activity.getActivityPrice(activityNumber))) {
+                schedule.addActivityToSchedule(day, activity.getActivity(activityNumber));
+            }
+
         }
 
         public void setAccountInfo(TravelerAccount travelerAccount) throws ParseException {
