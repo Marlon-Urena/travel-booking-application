@@ -22,7 +22,7 @@ import java.util.Scanner;
             schedule.setLengthOfTrip(lengthOfTrip);
         }
 
-        public void addActivityToSchedule(Activity activity, Estimate estimate){
+        public boolean addActivityToSchedule(Activity activity, Estimate estimate){
             System.out.print("Pick an Activity: ");
             activity.printActivityList();
 
@@ -32,11 +32,15 @@ import java.util.Scanner;
             System.out.print("Enter the number day you would like to do activty: ");
             int day = scan.nextInt();
 
+            scan.nextLine();
 
             if(estimate.addToTotalCost(activity.getActivityPrice(activityNumber))) {
                 schedule.addActivityToSchedule(day, activity.getActivity(activityNumber));
+                return true;
             }
 
+
+            return false;
         }
 
         public void setAccountInfo(TravelerAccount travelerAccount) throws ParseException {
