@@ -1,3 +1,7 @@
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
     public class Traveler {
@@ -48,4 +52,21 @@ import java.util.Scanner;
         public void retrieveBookingInfo() {
             //input booking number to database
         }
+
+        public boolean login(TravelerAccount travelerAccount) {
+            if(travelerAccount == null) {
+                this.travelerAccount = travelerAccount;
+                return false;
+            }
+            else {
+                this.travelerAccount = travelerAccount;
+                return true;
+            }
+        }
+
+        public boolean logout() {
+            this.travelerAccount = null;
+            return true;
+        }
+
 }

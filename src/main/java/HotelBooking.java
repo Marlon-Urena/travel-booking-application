@@ -1,4 +1,7 @@
-public class HotelBooking implements Booking {
+import java.util.List;
+import java.util.Map;
+
+public class HotelBooking extends Booking {
 
     private Estimate estimate;
     private Schedule schedule;
@@ -14,7 +17,7 @@ public class HotelBooking implements Booking {
     }
 
     @Override
-    public void provideOptions() {
+    public Map provideOptions(List<String> list) {
 
     }
 
