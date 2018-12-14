@@ -1,3 +1,5 @@
+import org.apache.commons.validator.routines.EmailValidator;
+
 import java.io.File;
 import java.util.Date;
 import java.util.Map;
@@ -15,6 +17,7 @@ public class TravelerAccount {
     private String email;
     private String password;
     private Map<Date, File> previousBookingsMap; //Possible to use keyset and store in List so that it may be organized. Booking information will be stored in json format
+    static String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
 
     public TravelerAccount(String email, String password) {
         this.email = email;
@@ -42,6 +45,17 @@ public class TravelerAccount {
 
     public String getEmail() {
         return email;
+    }
+    public static boolean createNewTravelerAccount(TravelerAccount travelerAccount, Database database, String email, String password) {
+        boolean validEmail = false;
+        boolean validPassword = false;
+        EmailValidator validator= EmailValidator.getInstance();
+        if (validator.isValid(email) && password.matches(pattern)) {
+            travelerAccount = new TravelerAccount(email, password);
+            database.addNewTravelerAccount(travelerAccount);
+            return true;
+        }
+        return false;
     }
     //Add the getters and rest of setters
 

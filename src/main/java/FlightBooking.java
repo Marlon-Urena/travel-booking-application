@@ -1,3 +1,8 @@
+import FlightPojos.Fare;
+import FlightPojos.FlightSearch;
+import FlightPojos.Inbound;
+import FlightPojos.Outbound;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import io.swagger.client.ApiException;
 import io.swagger.client.api.DefaultApi;
@@ -5,6 +10,8 @@ import io.swagger.client.model.LowFareSearchResponse;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,49 +54,56 @@ public class FlightBooking extends Booking{
         List<String> exclude_airlines = null;
         Boolean nonstop= null;
         Integer max_price = null;
-        String currency = null;
+        String currency = "USD";
         String travelClass = null;
-        Integer number_of_results = 5;
-
-        for (int i = 0; i <list.size(); i++) {
-
-        }
+        Integer number_of_results = 1;
 
         DefaultApi apiInstance = new DefaultApi();
+
         try {
             LowFareSearchResponse result = apiInstance.flightLowFareSearch(apiKey, origin, destination, departure_date, return_date, arrive_by, return_by, adults, children, infants, include_airlines, exclude_airlines, nonstop, max_price, currency, travelClass, number_of_results);
 
             Gson gson = new Gson();
-            String responseString = gson.toJson(result);
+            String jsonString = gson.toJson(result);
+            JSONObject jsonObject = new JSONObject("results");
+            ObjectMapper objectMapper = new ObjectMapper();
 
+            JSONArray search = jsonObject.getJSONArray("results");
 
-            Map<String, Object> map = new HashMap<>();
+            JSONObject searchResults;
+            JSONObject fare;
+            JSONArray itineraries;
+            JSONObject itineraryResults;
+            JSONObject inbound;
+            JSONObject outbound;
 
+            List<String> flightsearch = new ArrayList<>();
+            FlightSearch fly = objectMapper.readValue(jsonString, FlightSearch.class);
+            fly.setCurrency(jsonObject.getString("currency"));
 
-            JSONObject json = new JSONObject(responseString);
-            JSONArray results = json.getJSONArray("results"); //Looking into how to get the map into the JSON object
-            JSONObject results1 = results.getJSONObject(0); // Will be in for loop , may just have two results ex: fares
-            JSONArray itineraries = results1.getJSONArray("itineraries"); //Has array of itineraries
-            JSONObject itineraryResults = itineraries.getJSONObject(0); //Will be in for loop
+            for (int i = 0; i < search.length(); i++) {
+                searchResults = search.getJSONObject(i);
+                fare = searchResults.getJSONObject("fare");
 
-            JSONObject inbound = itineraryResults.getJSONObject("inbound");
-            JSONArray inboundFlights = inbound.getJSONArray("flights");
-            JSONObject inboundFlightResults = inboundFlights.getJSONObject(0); //May need to iterate for 1<results, each will contain departs_by, arrives_by, flight_number, aircraft, operating_airline, marketing_airline. Will be in for loop
-            JSONObject inboundBookingInfo = inboundFlightResults.getJSONObject("booking_info"); //Contains booking_code, travel class, and seats remaining
-            JSONObject inboundOrigin = inboundFlightResults.getJSONObject("origin"); // Contains the outbound terminal number(or letter), airport initials
-            JSONObject inboundDestination = inboundFlightResults.getJSONObject("destination"); // Contains the inbound terminal number(or letter), airport initials
+                itineraries = searchResults.getJSONArray("itineraries");
+                fly.setFare(objectMapper.readValue(String.valueOf(fare), Fare.class));
+                for (int j = 0; j < itineraries.length(); j++ ){
+                    itineraryResults = itineraries.getJSONObject(j);
+                    outbound = itineraryResults.getJSONObject("outbound");
+                    inbound = itineraryResults.getJSONObject("inbound");
 
-            JSONObject outbound = itineraryResults.getJSONObject("outbound"); //contains duration
-            JSONArray outboundFlights = outbound.getJSONArray("flights");
-            JSONObject outboundFlightResults = outboundFlights.getJSONObject(0); //May need to iterate for 1<results, each will contain departs_by, arrives_by, flight_number, aircraft, operating_airline, marketing_airline. Will be in for loop
-            JSONObject outboundBookingInfo = outboundFlightResults.getJSONObject("booking_info"); //Contains booking_code, travel class, and seats remaining
-            JSONObject outboundOrigin = outboundFlightResults.getJSONObject("origin"); // Contains the outbound terminal number(or letter), airport initials
-            JSONObject outboundDestination = outboundFlightResults.getJSONObject("destination"); // Contains the inbound terminal number(or letter), airport initials
-
-            resultsMap.put("")
+                    fly.setOutbound(objectMapper.readValue(String.valueOf(outbound), Outbound.class));
+                    fly.setInbound(objectMapper.readValue(String.valueOf(inbound), Inbound.class));
+                    flightsearch.add(fly.toString());
+                    System.out.println(flightsearch.get(j));
+                }
+            }
         }catch (ApiException e) {
             System.err.println(e);
             e.printStackTrace();
+        }
+        catch (IOException e) {
+
         }
 
 
