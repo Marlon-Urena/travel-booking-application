@@ -8,7 +8,7 @@ public class Estimate {
     }
 
     public boolean addToTotalCost(double amount){
-        if(budget.isEstimateOverBudget(amount + totalCost)) {
+        if(!budget.isEstimateOverBudget(amount + totalCost)) {
             totalCost += amount;
             return true;
         }
