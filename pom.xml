@@ -28,9 +28,20 @@
             <version>1.0.0</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.3.1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
-         
-         <build>
+
+
+
+
+    <build>
         <plugins>
             <plugin>
                 <!-- The following is required for JUnit 5 to play nicely with Maven -->
