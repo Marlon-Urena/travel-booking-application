@@ -25,7 +25,14 @@ class EstimateTest {
         assertFalse(estimate.addToTotalCost(20));
     }
 
+    @DisplayName("Test that an estimate can be printed")
     @Test
     void provideEstimate() {
+        Budget budget = new Budget();
+        budget.setTravelerBudget(0);
+        Estimate estimate = new Estimate(budget);
+        estimate.addToTotalCost(30);
+
+        assertEquals(30, estimate.provideEstimate());
     }
 }
