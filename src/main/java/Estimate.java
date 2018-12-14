@@ -1,8 +1,9 @@
 public class Estimate {
     Budget budget;
-    private double totalCost = 0;
+    public double totalCost = 0;
 
     public Estimate(Budget budget){
+
         this.budget = budget;
     }
 
@@ -16,7 +17,8 @@ public class Estimate {
         }
     }
 
-    public Double provideEstimate(){
+    public double provideEstimate(){
+
         return totalCost;
     }
 }
