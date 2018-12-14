@@ -10,7 +10,10 @@ import java.util.Scanner;
         private Schedule schedule;
         private String Login;
         private Database database;
-
+        
+        public void setBudget(double travelBudget){
+            this.budget.setTravelerBudget(travelBudget);
+        }
        public void makeRequest(Booking booking) {
             Scanner scan = new Scanner(System.in);
 
