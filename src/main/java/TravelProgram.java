@@ -4,7 +4,7 @@ import java.awt.print.Book;
 import java.text.ParseException;
 import java.util.Scanner;
 
-public class TravelProgram {
+public class TravelProgram{
     private static final int CREATE_BOOKING = 1;
     private static final int SEARCH_BOOKING = 2;
     private static final int CHANGE_INFO = 3;
@@ -13,7 +13,7 @@ public class TravelProgram {
 
     public static void main(String [] args) throws ParseException {
         Traveler traveler= new Traveler();
-        TravelerAccount travelerAccount=null;
+        TravelerAccount travelerAccount = null;
         Database database= new Database();
 
         Schedule schedule = new Schedule();
@@ -54,7 +54,7 @@ public class TravelProgram {
                     case CREATE_BOOKING:{
                         System.out.print("Set budget for your trip: ");
                         double tripBudget = scanner.nextInt();
-                        traveler.setBudget(budget, tripBudget);
+                        traveler.setBudget(tripBudget);
 
                         displayBookingMenu(scanner, traveler, flightBooking, estimate);
                     }
