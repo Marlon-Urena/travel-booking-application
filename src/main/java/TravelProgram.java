@@ -12,7 +12,6 @@ public class TravelProgram{
     private static final int EXIT = 4;
 
     public static void main(String [] args) throws ParseException {
-        Traveler traveler= new Traveler();
         TravelerAccount travelerAccount = null;
         Database database= new Database();
 
@@ -20,6 +19,8 @@ public class TravelProgram{
 
         Budget budget = new Budget();
         Estimate estimate = new Estimate(budget);
+        Activity activity = new Activity();
+        Traveler traveler = new Traveler(schedule, budget);
 
         Booking flightBooking = new FlightBooking(estimate, schedule);
         Booking hotelBooking = new HotelBooking(estimate, schedule);
@@ -56,7 +57,7 @@ public class TravelProgram{
                         double tripBudget = scanner.nextInt();
                         traveler.setBudget(tripBudget);
 
-                        displayBookingMenu(scanner, traveler, flightBooking, estimate);
+                        displayBookingMenu(scanner, traveler, flightBooking, estimate, activity);
                     }
 
                         break;
@@ -106,7 +107,7 @@ public class TravelProgram{
 
     }
 
-    public static void displayBookingMenu(Scanner scanner, Traveler traveler, Booking booking, Estimate estimate){
+    public static void displayBookingMenu(Scanner scanner, Traveler traveler, Booking booking, Estimate estimate, Activity activity){
         boolean EXIT = false; 
         do {
             System.out.println("*********************");
@@ -120,6 +121,7 @@ public class TravelProgram{
             System.out.println("\t5. Add activity to schedule");
             System.out.println("\t6. Estimate trip cost");
             System.out.println("\t7. Back to Main Menu");
+            System.out.print("\nEnter your selection:");
             
             int response = scanner.nextInt();
             
@@ -127,7 +129,7 @@ public class TravelProgram{
             else if(response == 2){}
             else if(response == 3){}
             else if(response == 4){}
-            else if(response == 5){}
+            else if(response == 5){traveler.addActivityToSchedule(activity, estimate);}
             else if(response == 6){System.out.println(estimate.provideEstimate());}
             else if(response == 7){EXIT = true;}
             else
