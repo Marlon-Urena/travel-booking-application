@@ -1,4 +1,3 @@
-import javax.xml.crypto.Data;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -7,22 +6,36 @@ import java.util.Scanner;
 
     public class Traveler {
         private TravelerAccount travelerAccount;
+        private Budget budget;
         private Schedule schedule;
         private String Login;
         private Database database;
-        
+        private String destination;
+        private int lengthOfTrip;
+
         public void setBudget(double travelBudget){
             this.budget.setTravelerBudget(travelBudget);
         }
-       public void makeRequest(Booking booking) {
+
+        public void setDestination(){
             Scanner scan = new Scanner(System.in);
 
             System.out.println("Enter your destination: ");
-            String destination = scan.next();
+            this.destination = scan.nextLine();
+        }
 
+        public void setLengthOfTrip(){
+            Scanner scan = new Scanner(System.in);
             System.out.println("How long would you like the trip to last? ");
-            int lengthOfTrip = scan.nextInt();
+            this.lengthOfTrip = scan.nextInt();
             schedule.setLengthOfTrip(lengthOfTrip);
+        }
+
+        public void makeRequest(Booking booking) {
+            setDestination();
+            setLengthOfTrip();
+
+            //implementation
         }
 
         public boolean addActivityToSchedule(Activity activity, Estimate estimate){
@@ -41,7 +54,6 @@ import java.util.Scanner;
                 schedule.addActivityToSchedule(day, activity.getActivity(activityNumber));
                 return true;
             }
-
 
             return false;
         }
@@ -76,12 +88,6 @@ import java.util.Scanner;
             String zip = scan.nextLine();
             travelerAccount.setZipCode(zip);
 
-            /*System.out.println("\tEnter your date of Birth: ");
-            String dateOfBirth = scan.next();
-            DateFormat formatter = new SimpleDateFormat("EEEE dd MMM yyyy");
-            Date date = formatter.parse(dateOfBirth);
-            travelerAccount.setDateOfBirth(date);*/
-
         }
 
         public void changeAccountInfo(TravelerAccount travelerAccount) throws ParseException {
@@ -98,13 +104,6 @@ import java.util.Scanner;
                 System.out.println("Enter new password: ");
                 String newPassword = scan.next();
                 travelerAccount.changePassword(newPassword);
-            }
-            else if(response == 3){
-                System.out.println("Enter new date of birth: ");
-                String newDate = scan.next();
-                DateFormat formatter = new SimpleDateFormat("EEEE dd MMM yyyy");
-                Date date = formatter.parse(newDate);
-                travelerAccount.changeDateOfBirth(date);
             }
         }
 
