@@ -1,6 +1,3 @@
-import java.util.List;
-import java.util.Map;
-
 public class HotelBooking extends Booking {
 
     private Estimate estimate;
@@ -17,7 +14,7 @@ public class HotelBooking extends Booking {
     }
 
     @Override
-    public Map provideOptions(List<String> list) {
+    public void provideOptions() {
 
     }
 

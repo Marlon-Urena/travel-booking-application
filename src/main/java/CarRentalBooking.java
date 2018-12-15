@@ -1,6 +1,3 @@
-import java.util.List;
-import java.util.Map;
-
 public class CarRentalBooking extends Booking{
 
     public CarRentalBooking(Estimate estimate, Schedule schedule) {
@@ -13,7 +10,7 @@ public class CarRentalBooking extends Booking{
     }
 
     @Override
-    public Map provideOptions(List<String> list) {
+    public void provideOptions() {
 
     }
 }

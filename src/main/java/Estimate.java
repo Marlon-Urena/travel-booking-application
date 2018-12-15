@@ -1,20 +1,25 @@
 public class Estimate {
-    private double budget;
-    private double totalCost = 0;
+    Budget budget;
+    public double totalCost = 0;
 
-    //HashMap of how much each "activity" cost?
+    public Estimate(Budget budget){
 
-    public void setEstimate(double budget) {
         this.budget = budget;
     }
 
-    public void addToTotalCost(double amount){
-        totalCost += amount;
+    public boolean addToTotalCost(double amount){
+        if(!budget.isEstimateOverBudget(amount + totalCost)) {
+            totalCost += amount;
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
-
-    public Double provideEstimate(){
+    public double provideEstimate(){
 
         return totalCost;
     }
 }
+

@@ -1,6 +1,3 @@
-import java.util.List;
-import java.util.Map;
-
 public class TrainBooking extends Booking{
     public TrainBooking(Estimate estimate, Schedule schedule) {
 
@@ -12,7 +9,7 @@ public class TrainBooking extends Booking{
     }
 
     @Override
-    public Map provideOptions(List<String> list) {
+    public void provideOptions() {
 
     }
 }
