@@ -92,7 +92,7 @@ import java.util.Scanner;
 
         public void changeAccountInfo(TravelerAccount travelerAccount) throws ParseException {
             Scanner scan = new Scanner(System.in);
-            System.out.println("Would you like to change your 1) email 2) password 3)date of birth 4) Go back");
+            System.out.println("Would you like to change your 1) email 2) password 3) Go back");
             int response = scan.nextInt();
 
             if(response == 1){
