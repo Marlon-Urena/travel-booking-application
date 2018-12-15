@@ -1,7 +1,4 @@
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
     public class Traveler {
@@ -13,8 +10,14 @@ import java.util.Scanner;
         private String destination;
         private int lengthOfTrip;
 
+
+        public Traveler(Schedule schedule, Budget budget){
+            this.schedule = schedule;
+            this.budget = budget;
+        }
+
         public void setBudget(double travelBudget){
-            this.budget.setTravelerBudget(travelBudget);
+            budget.setTravelerBudget(travelBudget);
         }
 
         public void setDestination(){
@@ -42,6 +45,7 @@ import java.util.Scanner;
             System.out.print("Pick an Activity: ");
             activity.printActivityList();
 
+            System.out.print("\nEnter your selection:");
             Scanner scan = new Scanner(System.in);
             int activityNumber = scan.nextInt();
 
