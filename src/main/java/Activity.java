@@ -30,8 +30,9 @@ public class Activity {
         return activityPriceMap.get(activity);
     }
 
-    public void printActivityList(){
+   public void printActivityList(){
         for(int i = 1; i <= activityMap.size(); i++){
+            System.out.println(" ");
             System.out.print("\t"+i + ". ");
             String s = activityMap.get(i);
             System.out.print(s + " = $" + activityPriceMap.get(s));
