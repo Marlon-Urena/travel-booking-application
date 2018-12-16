@@ -63,7 +63,7 @@ public class TravelProgram{
                         double tripBudget = scanner.nextDouble();
                         traveler.setBudget(tripBudget);
 
-                        displayBookingMenu(scanner, traveler, bookingOptions, estimate, activity); //Only passing flightBooking but what about carRentalBooking and the other bookings?
+                        displayBookingMenu(scanner, database, traveler, bookingOptions, estimate, activity); //Only passing flightBooking but what about carRentalBooking and the other bookings?
                     }
 
                         break;
@@ -109,11 +109,11 @@ public class TravelProgram{
 
         return selection;
     }
-    public static void makeNewBooking(Booking booking) {
+    public static void makeNewBooking(Traveler traveler, Object booking) {
 
     }
 
-    public static void displayBookingMenu(Scanner scanner, Traveler traveler, List<Booking> bookingOptions, Estimate estimate, Activity activity){
+    public static void displayBookingMenu(Scanner scanner, Database database, Traveler traveler, List<Booking> bookingOptions, Estimate estimate, Activity activity){
         boolean EXIT = false; 
         do {
             System.out.println("*********************");
@@ -131,8 +131,8 @@ public class TravelProgram{
             
             int response = scanner.nextInt();
             
-            if(response == 1){displayFlightBookingMenu(scanner, traveler, bookingOptions.get(response-1));}
-            else if(response == 2){displayCarRentalMenu(scanner, traveler, bookingOptions.get(response-1));}
+            if(response == 1){displayFlightBookingMenu(scanner, database, traveler, bookingOptions.get(response-1));}
+            else if(response == 2){displayCarRentalMenu(scanner, database,  traveler, bookingOptions.get(response-1));}
             else if(response == 3){}
             else if(response == 4){}
             else if(response == 5){traveler.addActivityToSchedule(activity, estimate);}
@@ -144,13 +144,13 @@ public class TravelProgram{
         }while(!EXIT);
         
     }
-    public static void displayFlightBookingMenu(Scanner scanner, Traveler traveler, Booking flightBooking) {
+    public static void displayFlightBookingMenu(Scanner scanner, Database database,  Traveler traveler, Booking flightBooking) {
         System.out.println("*********************");
         System.out.println("Flight Search");
         System.out.println("*********************");
         System.out.println();
         List<String> searchParams = new ArrayList<>();
-        List<String> flightOptions;
+        List <Object> flightOptions;
         int selection;
 
         System.out.println("Enter search parameters below. Leave unwanted parameters blank.");
@@ -191,7 +191,7 @@ public class TravelProgram{
         }
         System.out.println("Enter the number next to your desired itinerary: ");
         selection = scanner.nextInt();
-
+        traveler.makeRequest(flightOptions.get(selection), database);
         scanner.nextLine();
 
         //traveler.makeRequest(flightOptions.get(selection-1)); //Will request the selected booking but will check to see if it fits within Traveler's budget
@@ -199,13 +199,13 @@ public class TravelProgram{
 
     }
 
-    public static void displayCarRentalMenu(Scanner scanner, Traveler traveler, Booking carRentalBooking) {
+    public static void displayCarRentalMenu(Scanner scanner, Database database, Traveler traveler, Booking carRentalBooking) {
         System.out.println("*********************");
         System.out.println("Car Rental Search");
         System.out.println("*********************");
         System.out.println();
         List<String> searchParams = new ArrayList<>();
-        List<String> carRentalOptions;
+        List<Object> carRentalOptions;
         int selection;
 
         System.out.print("(Required) Enter airport you would like to pick up car from: ");
@@ -224,6 +224,7 @@ public class TravelProgram{
         }
         System.out.println("Enter the number next to your desired option: ");
         selection = scanner.nextInt();
+        traveler.makeRequest(carRentalOptions.get(selection), database);
         scanner.nextLine();
 
 

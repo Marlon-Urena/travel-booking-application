@@ -1,38 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8c8a838-92da-489a-a589-b84c2a95ad6a" name="Default Changelist" comment="Moved the test classes to the test folder">
+    <list default="true" id="d8c8a838-92da-489a-a589-b84c2a95ad6a" name="Default Changelist" comment="Some pre-called search response that will be saved to resources folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ActivityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ActivityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BudgetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BudgetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarRentalBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRentalBooking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatabaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EstimateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EstimateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FlightBooking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/BookingInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/Destination.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/Fare.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/Flight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/FlightSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/Inbound.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/Itinerary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/Origin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/Outbound.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/PricePerAdult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/PricePerChild.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/PricePerInfant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/Restrictions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightPojos/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HotelBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HotelBooking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TrainBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TrainBooking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TravelProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TravelProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Traveler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Traveler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TravelerAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TravelerAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TravelerAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TravelerAccountTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,28 +28,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="72" />
+          <entry key="CarRentalSearchString" value="1" />
+          <entry key="LowFareSearchResponse" value="2" />
+          <entry key="LowFareSearchString" value="2" />
+          <entry key="java" value="94" />
+          <entry key="json" value="1" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="72" />
+          <entry key="JAVA" value="94" />
+          <entry key="JSON" value="6" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="java" value="14094" />
-          <entry key="txt" value="132" />
+          <entry key="java" value="15832" />
+          <entry key="txt" value="1365" />
           <entry key="xml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14094" />
-          <entry key="PLAIN_TEXT" value="133" />
+          <entry key="JAVA" value="15832" />
+          <entry key="PLAIN_TEXT" value="1366" />
           <entry key="XML" value="17" />
         </counts>
       </usages-collector>
@@ -96,19 +72,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/TravelProgram.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Budget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Traveler.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/DefaultApiMock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1384">
-              <caret line="138" column="61" selection-start-line="138" selection-start-column="61" selection-end-line="138" selection-end-column="61" />
+            <state relative-caret-position="629">
+              <caret line="37" column="76" selection-start-line="37" selection-start-column="76" selection-end-line="37" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,49 +93,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/EstimateTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/CarRentalSearchResponse.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="24072">
+              <caret line="1416" column="1" selection-start-line="1416" selection-start-column="1" selection-end-line="1416" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TravelerAccountTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/CarRentalSearchString">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/TravelerAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="772">
-              <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+            <state relative-caret-position="2274">
+              <caret line="153" selection-start-line="153" selection-end-line="153" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2609#2610#0" expanded="true" />
-                <element signature="e#2637#2638#0" expanded="true" />
-                <element signature="e#3006#3007#0" expanded="true" />
-                <element signature="e#3046#3047#0" expanded="true" />
-                <element signature="e#3096#3097#0" expanded="true" />
-                <element signature="e#3139#3140#0" expanded="true" />
-                <element signature="e#3178#3179#0" expanded="true" />
-                <element signature="e#3210#3211#0" expanded="true" />
-                <element signature="e#3251#3252#0" expanded="true" />
-                <element signature="e#3285#3286#0" expanded="true" />
-                <element signature="e#3330#3331#0" expanded="true" />
-                <element signature="e#3368#3369#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/LowFareSearchString">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="863">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
@@ -167,48 +134,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Booking.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="76" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ActivityTest.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/TrainBooking.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/LowFareSearchResponse">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="17">
+              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/HotelBooking.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-java-client/1.0.0/swagger-java-client-1.0.0-sources.jar!/io/swagger/client/api/DefaultApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-              <folding>
-                <element signature="e#315#316#0" expanded="true" />
-                <element signature="e#354#355#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="440">
+              <caret line="1364" column="405" selection-start-line="1364" selection-start-column="53" selection-end-line="1364" selection-end-column="405" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/FlightBooking.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/FlightBookingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1972">
-              <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+            <state relative-caret-position="347">
+              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,6 +176,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -242,16 +197,24 @@
         <option value="$PROJECT_DIR$/src/main/java/DataBase.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/models/carrental/Image.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TrainBooking.java" />
+        <option value="$PROJECT_DIR$/src/main/java/HotelBooking.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Booking.java" />
         <option value="$PROJECT_DIR$/src/main/java/FlightBooking.java" />
         <option value="$PROJECT_DIR$/src/main/java/CarRentalBooking.java" />
         <option value="$PROJECT_DIR$/src/main/java/Database.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Schedule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TrainBooking.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Booking.java" />
         <option value="$PROJECT_DIR$/src/main/java/TravelerAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HotelBooking.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Traveler.java" />
         <option value="$PROJECT_DIR$/src/main/java/TravelProgram.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Traveler.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/LowFareSearchResponse" />
+        <option value="$PROJECT_DIR$/src/main/resources/LowFareSearchString" />
+        <option value="$PROJECT_DIR$/src/test/java/LowFareFlightSearchMockTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LowFareFlightSearchMock.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/CarRentalSearchResponse.json" />
+        <option value="$PROJECT_DIR$/src/test/java/DefaultApiMock.java" />
+        <option value="$PROJECT_DIR$/src/test/java/FlightBookingTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/CarRentalSearchString" />
       </list>
     </option>
   </component>
@@ -262,7 +225,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1928" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -303,6 +266,13 @@
               <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
               <item name="travel-booking-application" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travel-booking-application" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -316,6 +286,32 @@
               <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
+            <path>
+              <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.swagger:swagger-java-client:1.0.0" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.swagger:swagger-java-client:1.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="swagger-java-client-1.0.0.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.swagger:swagger-java-client:1.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="swagger-java-client-1.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.swagger:swagger-java-client:1.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="swagger-java-client-1.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -325,11 +321,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544947927843" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544967496913" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/travel-booking-application" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -445,8 +449,102 @@
       <option name="project" value="LOCAL" />
       <updated>1544075747239</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Edited a bunch of things and added my implementation for flightBooking and carRentalBooking classes. Still have some stuff to do.">
+      <created>1544948055736</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544948055736</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Created a mock for the api that we are using which will get a pre called response from the resources folder">
+      <created>1544966321406</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1544966321406</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Created a test class for the flight booking class. Still have to add some things to it.">
+      <created>1544966380885</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1544966380885</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Some pre-called search response that will be saved to resources folder">
+      <created>1544966458483</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1544966458483</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Some pre-called search response that will be saved to resources folder">
+      <created>1544966976498</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1544966976498</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Booking class will not receive a list of objects instead of strings">
+      <created>1544967049738</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1544967049738</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Change return type for provideOptions method to return List of Objects. Made it easier to save a json to the database.">
+      <created>1544967160989</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1544967160989</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Modied the provideOptions method to return a List of objects and also made it easier to save selected itinerary stored into database.">
+      <created>1544967273381</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1544967273381</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Now using LocalDate class to handle dates. Wrote some useful methods to validate dates.">
+      <created>1544967382601</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1544967382601</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added LocalDates to handle problems that requires days such as birthdays">
+      <created>1544967451445</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1544967451445</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Provided implementation to save the booking file to a specific folder on the root of the home directory called travel. Still have to change the file name so that the method can differentiate between Car Rentals and flights.">
+      <created>1544967655760</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1544967655760</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ActivityTest - 2018.12.16 at 03h 10m 32s.xml">
+      <configuration name="ActivityTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BudgetTest - 2018.12.16 at 03h 10m 38s.xml">
+      <configuration name="BudgetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DatabaseTest - 2018.12.16 at 03h 10m 43s.xml">
+      <configuration name="DatabaseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EstimateTest - 2018.12.16 at 03h 10m 53s.xml">
+      <configuration name="EstimateTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TravelerAccountTest - 2018.12.16 at 03h 12m 09s.xml">
+      <configuration name="TravelerAccountTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -458,7 +556,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.14392324" />
@@ -471,7 +569,7 @@
       <window_info anchor="bottom" id="Messages" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -496,16 +594,16 @@
       <window_info id="Designer" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50161815" side_tool="true" weight="0.14232409" />
-      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49946696" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4989339" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49840087" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49520257" weight="0.33188722" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4936034" weight="0.13991323" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -524,18 +622,19 @@
     <MESSAGE value="Added the TravelAccount class" />
     <MESSAGE value="Updated DataBase and Traveler classes" />
     <MESSAGE value="Moved the test classes to the test folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved the test classes to the test folder" />
+    <MESSAGE value="Edited a bunch of things and added my implementation for flightBooking and carRentalBooking classes. Still have some stuff to do." />
+    <MESSAGE value="Created a mock for the api that we are using which will get a pre called response from the resources folder" />
+    <MESSAGE value="Created a test class for the flight booking class. Still have to add some things to it." />
+    <MESSAGE value="Some pre-called search response that will be saved to resources folder" />
+    <MESSAGE value="Booking class will not receive a list of objects instead of strings" />
+    <MESSAGE value="Change return type for provideOptions method to return List of Objects. Made it easier to save a json to the database." />
+    <MESSAGE value="Modied the provideOptions method to return a List of objects and also made it easier to save selected itinerary stored into database." />
+    <MESSAGE value="Now using LocalDate class to handle dates. Wrote some useful methods to validate dates." />
+    <MESSAGE value="Added LocalDates to handle problems that requires days such as birthdays" />
+    <MESSAGE value="Provided implementation to save the booking file to a specific folder on the root of the home directory called travel. Still have to change the file name so that the method can differentiate between Car Rentals and flights." />
+    <option name="LAST_COMMIT_MESSAGE" value="Provided implementation to save the booking file to a specific folder on the root of the home directory called travel. Still have to change the file name so that the method can differentiate between Car Rentals and flights." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/travel-booking-application.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/flight/BookingInfo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/flight/Destination.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/flight/Fare.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/flight/Flight.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/flight/Inbound.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/flight/Origin.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/flight/Itinerary.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/flight/FlightSearch.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/flight/Outbound.java" />
@@ -580,105 +679,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/models/carrental/CarRentalSearch.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CarRentalBooking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Budget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2255#2256#0" expanded="true" />
-            <element signature="e#2307#2308#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Estimate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DatabaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-462">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="898">
-          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BudgetTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/EstimateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TravelerAccountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -689,39 +693,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TravelerAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="772">
-          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2609#2610#0" expanded="true" />
-            <element signature="e#2637#2638#0" expanded="true" />
-            <element signature="e#3006#3007#0" expanded="true" />
-            <element signature="e#3046#3047#0" expanded="true" />
-            <element signature="e#3096#3097#0" expanded="true" />
-            <element signature="e#3139#3140#0" expanded="true" />
-            <element signature="e#3178#3179#0" expanded="true" />
-            <element signature="e#3210#3211#0" expanded="true" />
-            <element signature="e#3251#3252#0" expanded="true" />
-            <element signature="e#3285#3286#0" expanded="true" />
-            <element signature="e#3330#3331#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Booking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="76" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/HotelBooking.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="e#315#316#0" expanded="true" />
             <element signature="e#354#355#0" expanded="true" />
@@ -729,10 +704,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ActivityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BudgetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DatabaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/EstimateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-93">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TravelerAccountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CarRentalBooking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Estimate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TravelProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3067">
+          <caret line="235" selection-start-line="235" selection-end-line="235" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Traveler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1384">
-          <caret line="138" column="61" selection-start-line="138" selection-start-column="61" selection-end-line="138" selection-end-column="61" />
+        <state relative-caret-position="-588">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -741,25 +808,97 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FlightBooking.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+        <state relative-caret-position="323">
+          <caret line="40" column="56" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TravelProgram.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/LowFareFlightSearchMockTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="34">
+          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ActivityTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Budget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-java-client/1.0.0/swagger-java-client-1.0.0-sources.jar!/io/swagger/client/api/DefaultApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="1364" column="405" selection-start-line="1364" selection-start-column="53" selection-end-line="1364" selection-end-column="405" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DefaultApiMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="76" selection-start-line="37" selection-start-column="76" selection-end-line="37" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/LowFareSearchString">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="863">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/LowFareSearchResponse">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CarRentalSearchResponse.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24072">
+          <caret line="1416" column="1" selection-start-line="1416" selection-start-column="1" selection-end-line="1416" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CarRentalSearchString">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FlightBookingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Booking.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TravelerAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2274">
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
