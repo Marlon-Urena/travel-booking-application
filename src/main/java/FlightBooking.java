@@ -31,13 +31,14 @@ public class FlightBooking extends Booking{
         this.schedule= schedule;
     }
 
+
     @Override
     public void receiveRequest(Estimate estimate, Schedule schedule) {
 
     }
 
     @Override
-    public List<String> provideOptions(List<String> list) {
+    public List<Object> provideOptions(List<String> list) {
         List<Object> defaultParamsList = new ArrayList<>();
         String origin = String.valueOf(list.get(0));
         String destination = String.valueOf(list.get(1));
@@ -59,7 +60,7 @@ public class FlightBooking extends Booking{
 
 
 
-        List<String> flightResults = new ArrayList<>();
+        List<Object> flightResults = new ArrayList<>();
 
         DefaultApi apiInstance = new DefaultApi();
 
@@ -96,8 +97,7 @@ public class FlightBooking extends Booking{
 
                     fly.setOutbound(objectMapper.readValue(String.valueOf(outbound), Outbound.class));
                     fly.setInbound(objectMapper.readValue(String.valueOf(inbound), Inbound.class));
-                    flightResults.add(fly.toString());
-                    // System.out.println(flightResults.get(j));
+                    flightResults.add(fly);
                 }
             }
         }catch (ApiException e) {
@@ -105,7 +105,7 @@ public class FlightBooking extends Booking{
             int beginLoc= responseString.indexOf("message")+12;
             int endLoc = responseString.indexOf("\"\n}");
             String exceptionErrorMessage = responseString.substring(beginLoc,endLoc);
-            List<String> exceptionMessage = new ArrayList<>();
+            List<Object> exceptionMessage = new ArrayList<>();
             exceptionMessage.add(exceptionErrorMessage);
             return exceptionMessage;
         }
