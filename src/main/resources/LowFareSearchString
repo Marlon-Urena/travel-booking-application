@@ -1,0 +1,61 @@
+********************** Flight Result ***********************
+***[Outbound]***********************************************
+Airline: (SK) (904)
+Operated By: (SK)
+(EWR)	--->	(ARN)		Flight Duration: (13:55)
+Terminal (B)	Terminal (5)
+
+Departs: (2018-12-23T17:55)
+Arrives: (2018-12-24T07:35)
+
+Travel Class: (ECONOMY)
+Seats Remaining: (9)
+************************************************************
+Airline: (SK) (531)
+Operated By: (SK)
+(ARN)	--->	(LHR)		Flight Duration: (13:55)
+Terminal (5)	Terminal (2)
+
+Departs: (2018-12-24T11:05)
+Arrives: (2018-12-24T12:50)
+
+Travel Class: (ECONOMY)
+Seats Remaining: (9)
+************************************************************
+***[Inbound]************************************************
+Airline: (SK) (1508)
+Operated By: (SK)
+(LHR)	--->	(CPH)		Flight Duration: (45:55)
+Terminal (2)	Terminal (3)
+
+Departs: (2018-12-28T20:30)
+Arrives: (2018-12-28T23:25)
+
+Travel Class: (ECONOMY)
+Seats Remaining: (9)
+************************************************************
+Airline: (SK) (1458)
+Operated By: (SK)
+(CPH)	--->	(OSL)		Flight Duration: (45:55)
+Terminal (3)	Terminal (null)
+
+Departs: (2018-12-29T11:50)
+Arrives: (2018-12-29T13:00)
+
+Travel Class: (ECONOMY)
+Seats Remaining: (6)
+************************************************************
+Airline: (SK) (907)
+Operated By: (SK)
+(OSL)	--->	(EWR)		Flight Duration: (45:55)
+Terminal (null)	Terminal (B)
+
+Departs: (2018-12-30T11:00)
+Arrives: (2018-12-30T13:25)
+
+Travel Class: (ECONOMY)
+Seats Remaining: (9)
+************************************************************
+************************************************************
+Price per adult: 1229.90 USD
+[Total Price] = 1229.90 USD
