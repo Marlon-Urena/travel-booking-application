@@ -1,5 +1,7 @@
+import java.util.List;
+
 public class TrainBooking extends Booking{
-    public TrainBooking(Estimate estimate, Schedule schedule) {
+    public TrainBooking() {
 
     }
 
@@ -9,7 +11,8 @@ public class TrainBooking extends Booking{
     }
 
     @Override
-    public void provideOptions() {
+    public List<String> provideOptions(List<String> list) {
 
+        return list;
     }
 }

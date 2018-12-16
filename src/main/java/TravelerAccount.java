@@ -1,8 +1,14 @@
 import org.apache.commons.validator.routines.EmailValidator;
 
 import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
 import java.util.Map;
+
+import static java.time.LocalDate.parse;
 
 public class TravelerAccount {
     private String firstName;
@@ -12,11 +18,12 @@ public class TravelerAccount {
     private String city;
     private String state;
     private String zipCode;
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
     private String email;
     private String password;
     private Map<Date, File> previousBookingsMap; //Possible to use keyset and store in List so that it may be organized. Booking information will be stored in json format
     static String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
+    private SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
     public TravelerAccount(String email, String password) {
         this.email = email;
@@ -38,18 +45,34 @@ public class TravelerAccount {
         }
         return false;
     }
-    public void changePassword(String password) {
+
+    public boolean changePassword(String password) {
         //have code here that will determine if password is valid(maybe based on whether it has appropriate characters and length
-        this.password=password;
+        if(password.matches(pattern)) {
+            this.password=password;
+            return true;
+        }
+        return false;
     }
 
-    public void changeEmail(String email) {
+    public boolean changeEmail(String email) {
         //have code here that will determine if email is valid
-        this.email=email;
+        EmailValidator validator = EmailValidator.getInstance();
+
+        if (validator.isValid(email)) {
+            this.email=email;
+            return true;
+        }
+        return false;
+
     }
 
-    public void changeDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public boolean changeDateOfBirth(LocalDate dateOfBirth) {
+        if (isValidDateOfBirth(dateOfBirth,13)) {
+            this.dateOfBirth = dateOfBirth;
+            return true;
+        }
+        return false;
     }
 
     public String getEmail() {
@@ -86,8 +109,29 @@ public class TravelerAccount {
         this.zipCode = zipCode;
     }
 
-    public void setDateOfBirth(Date dob){
-        this.dateOfBirth = dob;
+    private boolean isValidDateOfBirth(String dateOfBirth, int validAge) {
+            LocalDate today = LocalDate.now();
+            LocalDate validBeforeThisDate = parse(dateOfBirth);
+            if (calculateAge(validBeforeThisDate, today) >= validAge) {
+                return true;
+            }
+        return false;
+    }
+
+    private boolean isValidDateOfBirth(LocalDate dateOfBirth, int validAge) {
+        LocalDate today = LocalDate.now();
+        if (calculateAge(dateOfBirth, today) >= validAge) {
+            return true;
+        }
+        return false;
+    }
+
+    public static int calculateAge(LocalDate birthDate, LocalDate currentDate) {
+        if ((birthDate != null) && (currentDate != null)) {
+            return Period.between(birthDate, currentDate).getYears();
+        } else {
+            return 0;
+        }
     }
 }
 

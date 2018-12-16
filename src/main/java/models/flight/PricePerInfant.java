@@ -1,24 +1,19 @@
 
-package FlightPojos;
+package models.flight;
+
+import com.fasterxml.jackson.annotation.*;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "total_fare",
     "tax"
 })
-public class PricePerChild {
+public class PricePerInfant {
 
     @JsonProperty("total_fare")
     private String totalFare;
@@ -31,7 +26,7 @@ public class PricePerChild {
      * No args constructor for use in serialization
      * 
      */
-    public PricePerChild() {
+    public PricePerInfant() {
     }
 
     /**
@@ -39,7 +34,7 @@ public class PricePerChild {
      * @param totalFare
      * @param tax
      */
-    public PricePerChild(String totalFare, String tax) {
+    public PricePerInfant(String totalFare, String tax) {
         super();
         this.totalFare = totalFare;
         this.tax = tax;
@@ -92,10 +87,10 @@ public class PricePerChild {
         if (other == this) {
             return true;
         }
-        if ((other instanceof PricePerChild) == false) {
+        if ((other instanceof PricePerInfant) == false) {
             return false;
         }
-        PricePerChild rhs = ((PricePerChild) other);
+        PricePerInfant rhs = ((PricePerInfant) other);
         return new EqualsBuilder().append(totalFare, rhs.totalFare).append(tax, rhs.tax).append(additionalProperties, rhs.additionalProperties).isEquals();
     }
 

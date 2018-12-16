@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class HotelBooking extends Booking {
 
     private Estimate estimate;
@@ -9,13 +11,14 @@ public class HotelBooking extends Booking {
     }
 
     @Override
-    public void receiveRequest() {
-
+    public void receiveRequest(Estimate estimate, Schedule schedule) {
+        System.out.print("hey");
     }
 
     @Override
-    public void provideOptions() {
-
+    public List<String> provideOptions(List<String> list) {
+    System.out.print("hey");
+    return list;
     }
 
 }

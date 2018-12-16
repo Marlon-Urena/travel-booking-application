@@ -1,25 +1,21 @@
 
-package FlightPojos;
+package models.flight;
+
+import com.fasterxml.jackson.annotation.*;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "duration",
     "flights"
 })
-public class Outbound {
+public class Inbound {
 
     @JsonProperty("duration")
     private String duration;
@@ -32,7 +28,7 @@ public class Outbound {
      * No args constructor for use in serialization
      * 
      */
-    public Outbound() {
+    public Inbound() {
     }
 
     /**
@@ -40,7 +36,7 @@ public class Outbound {
      * @param duration
      * @param flights
      */
-    public Outbound(String duration, List<Flight> flights) {
+    public Inbound(String duration, List<Flight> flights) {
         super();
         this.duration = duration;
         this.flights = flights;
@@ -91,10 +87,10 @@ public class Outbound {
         if (other == this) {
             return true;
         }
-        if ((other instanceof Outbound) == false) {
+        if ((other instanceof Inbound) == false) {
             return false;
         }
-        Outbound rhs = ((Outbound) other);
+        Inbound rhs = ((Inbound) other);
         return new EqualsBuilder().append(duration, rhs.duration).append(flights, rhs.flights).append(additionalProperties, rhs.additionalProperties).isEquals();
     }
 

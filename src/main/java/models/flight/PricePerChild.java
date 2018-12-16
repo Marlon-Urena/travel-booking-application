@@ -1,24 +1,19 @@
 
-package FlightPojos;
+package models.flight;
+
+import com.fasterxml.jackson.annotation.*;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "total_fare",
     "tax"
 })
-public class PricePerAdult {
+public class PricePerChild {
 
     @JsonProperty("total_fare")
     private String totalFare;
@@ -31,7 +26,7 @@ public class PricePerAdult {
      * No args constructor for use in serialization
      * 
      */
-    public PricePerAdult() {
+    public PricePerChild() {
     }
 
     /**
@@ -39,7 +34,7 @@ public class PricePerAdult {
      * @param totalFare
      * @param tax
      */
-    public PricePerAdult(String totalFare, String tax) {
+    public PricePerChild(String totalFare, String tax) {
         super();
         this.totalFare = totalFare;
         this.tax = tax;
@@ -92,10 +87,10 @@ public class PricePerAdult {
         if (other == this) {
             return true;
         }
-        if ((other instanceof PricePerAdult) == false) {
+        if ((other instanceof PricePerChild) == false) {
             return false;
         }
-        PricePerAdult rhs = ((PricePerAdult) other);
+        PricePerChild rhs = ((PricePerChild) other);
         return new EqualsBuilder().append(totalFare, rhs.totalFare).append(tax, rhs.tax).append(additionalProperties, rhs.additionalProperties).isEquals();
     }
 

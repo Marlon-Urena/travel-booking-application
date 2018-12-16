@@ -1,7 +1,15 @@
+import java.io.IOException;
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
+import java.util.Date;
 import java.util.Scanner;
 
-    public class Traveler {
+import static java.time.LocalDate.parse;
+
+public class Traveler {
         private TravelerAccount travelerAccount;
         private Budget budget;
         private Schedule schedule;
@@ -27,21 +35,35 @@ import java.util.Scanner;
             this.destination = scan.nextLine();
         }
 
-        public void setLengthOfTrip(){
+        public String getDestination() {
+            return this.destination;
+        }
+
+        public void setTripDates(){
             Scanner scan = new Scanner(System.in);
-            System.out.println("How long would you like the trip to last? ");
-            this.lengthOfTrip = scan.nextInt();
-            schedule.setLengthOfTrip(lengthOfTrip);
+            boolean validDates = false;
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+            System.out.println("What is the start and end date for your trip? Type dates in yyyy-MM-dd format.");
+            do {
+                System.out.print("Start date: ");
+                String startDate = scan.nextLine();
+
+                System.out.print("End date: ");
+                String endDate = scan.nextLine();
+                validDates = schedule.setDates(startDate, endDate);
+            }while (!validDates);
         }
 
         public void makeRequest(Booking booking) {
             setDestination();
-            setLengthOfTrip();
-
             //implementation
         }
 
         public boolean addActivityToSchedule(Activity activity, Estimate estimate){
+            boolean isValid = false;
+            Date activityDate;
+
             System.out.print("Pick an Activity: ");
             activity.printActivityList();
 
@@ -49,20 +71,35 @@ import java.util.Scanner;
             Scanner scan = new Scanner(System.in);
             int activityNumber = scan.nextInt();
 
-            System.out.print("Enter the number day you would like to do activty: ");
-            int day = scan.nextInt();
-
             scan.nextLine();
 
-            if(estimate.addToTotalCost(activity.getActivityPrice(activityNumber))) {
-                schedule.addActivityToSchedule(day, activity.getActivity(activityNumber));
-                return true;
-            }
+            System.out.println("Enter the date for when you would like to do activity ");
+
+            do {
+                System.out.print("Date: ");
+                String day = scan.nextLine();
+                try {
+                    activityDate = schedule.isDateValid(day);
+                    isValid = true;
+                    if(estimate.addToTotalCost(activity.getActivityPrice(activityNumber))) {
+                        schedule.addActivityToSchedule(activityDate, activity.getActivity(activityNumber));
+                        return true;
+                    }
+                }
+                catch(ParseException e) {
+                    System.out.println(day + "is invalid date format. Example: yyyy-MM-dd is valid date format.");
+                }
+                catch (IOException e) {
+                    System.out.println(day + "is not a valid date. Please pick a date after today's date.");
+                }
+            }while(!isValid);
+
+
 
             return false;
         }
 
-        public void setAccountInfo(TravelerAccount travelerAccount) throws ParseException {
+        public void setAccountInfo(TravelerAccount travelerAccount) {
             Scanner scan = new Scanner(System.in);
             System.out.println("*********************");
             System.out.println("Enter Account Info");
@@ -88,9 +125,19 @@ import java.util.Scanner;
             String state = scan.nextLine();
             travelerAccount.setState(state);
 
-            System.out.print("\tEnter your ZIP Code: ");
+            System.out.print("\tEnter your zip code: ");
             String zip = scan.nextLine();
             travelerAccount.setZipCode(zip);
+
+            System.out.print("\tEnter you date of birth in yyyy-MM-dd format: ");
+            try {
+                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+                String dob = scan.nextLine();
+                LocalDate dateOfBirth = parse(dob);
+                travelerAccount.changeDateOfBirth(dateOfBirth);
+            } catch (DateTimeParseException e) {
+                System.out.println("Invalid date of birth.");
+            }
 
         }
 

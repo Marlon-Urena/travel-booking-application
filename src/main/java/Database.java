@@ -45,9 +45,10 @@ public class Database {
     public void addNewBookingData(String bookingNumber, File bookingFile) {
     /*Have to rethink how I am going to implement. May need to add an additional parameter for JSON resource that we get
     through api. May consider have private method that creates a folder and saves JSON file
-
      */
-        bookingMap.put(bookingNumber, bookingFile);
+
+    bookingMap.put(bookingNumber, bookingFile);
+
     }
 
     public File searchOldBookingData(String bookingNumber){

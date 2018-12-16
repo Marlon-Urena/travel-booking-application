@@ -1,24 +1,20 @@
 
-package FlightPojos;
+package models.flight;
 
-import java.util.HashMap;
-import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.*;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "airport",
     "terminal"
 })
-public class Destination {
+public class Origin {
 
     @JsonProperty("airport")
     private String airport;
@@ -31,7 +27,7 @@ public class Destination {
      * No args constructor for use in serialization
      * 
      */
-    public Destination() {
+    public Origin() {
     }
 
     /**
@@ -39,7 +35,7 @@ public class Destination {
      * @param airport
      * @param terminal
      */
-    public Destination(String airport, String terminal) {
+    public Origin(String airport, String terminal) {
         super();
         this.airport = airport;
         this.terminal = terminal;
@@ -90,10 +86,10 @@ public class Destination {
         if (other == this) {
             return true;
         }
-        if ((other instanceof Destination) == false) {
+        if ((other instanceof Origin) == false) {
             return false;
         }
-        Destination rhs = ((Destination) other);
+        Origin rhs = ((Origin) other);
         return new EqualsBuilder().append(airport, rhs.airport).append(terminal, rhs.terminal).append(additionalProperties, rhs.additionalProperties).isEquals();
     }
 

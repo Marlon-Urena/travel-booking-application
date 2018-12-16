@@ -2,6 +2,8 @@ import org.apache.commons.validator.routines.EmailValidator;
 
 import java.awt.print.Book;
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class TravelProgram{
@@ -23,9 +25,13 @@ public class TravelProgram{
         Traveler traveler = new Traveler(schedule, budget);
 
         Booking flightBooking = new FlightBooking(estimate, schedule);
-        Booking hotelBooking = new HotelBooking(estimate, schedule);
+        //Booking hotelBooking = new HotelBooking();
         Booking carRentalBooking = new CarRentalBooking(estimate, schedule);
-        Booking trainBooking = new TrainBooking(estimate, schedule);
+        //Booking trainBooking = new TrainBooking();
+        List<Booking> bookingOptions = new ArrayList<>();
+
+        bookingOptions.add(flightBooking);
+        bookingOptions.add(carRentalBooking);
 
         boolean signedIn = false;
 
@@ -51,13 +57,13 @@ public class TravelProgram{
 
                 selection = displayMenu(scanner);
 
-                switch (selection) { //May change listing to just have makeBooking call the booking types
+                switch (selection) {
                     case CREATE_BOOKING:{
                         System.out.print("Set budget for your trip: ");
-                        double tripBudget = scanner.nextInt();
+                        double tripBudget = scanner.nextDouble();
                         traveler.setBudget(tripBudget);
 
-                        displayBookingMenu(scanner, traveler, flightBooking, estimate, activity);
+                        displayBookingMenu(scanner, traveler, bookingOptions, estimate, activity); //Only passing flightBooking but what about carRentalBooking and the other bookings?
                     }
 
                         break;
@@ -107,7 +113,7 @@ public class TravelProgram{
 
     }
 
-    public static void displayBookingMenu(Scanner scanner, Traveler traveler, Booking booking, Estimate estimate, Activity activity){
+    public static void displayBookingMenu(Scanner scanner, Traveler traveler, List<Booking> bookingOptions, Estimate estimate, Activity activity){
         boolean EXIT = false; 
         do {
             System.out.println("*********************");
@@ -125,8 +131,8 @@ public class TravelProgram{
             
             int response = scanner.nextInt();
             
-            if(response == 1){}
-            else if(response == 2){}
+            if(response == 1){displayFlightBookingMenu(scanner, traveler, bookingOptions.get(response-1));}
+            else if(response == 2){displayCarRentalMenu(scanner, traveler, bookingOptions.get(response-1));}
             else if(response == 3){}
             else if(response == 4){}
             else if(response == 5){traveler.addActivityToSchedule(activity, estimate);}
@@ -138,7 +144,90 @@ public class TravelProgram{
         }while(!EXIT);
         
     }
+    public static void displayFlightBookingMenu(Scanner scanner, Traveler traveler, Booking flightBooking) {
+        System.out.println("*********************");
+        System.out.println("Flight Search");
+        System.out.println("*********************");
+        System.out.println();
+        List<String> searchParams = new ArrayList<>();
+        List<String> flightOptions;
+        int selection;
 
+        System.out.println("Enter search parameters below. Leave unwanted parameters blank.");
+        System.out.print("(Required) Travel from: ");
+        searchParams.add(scanner.nextLine());
+        System.out.print("(Required) Travel to: ");
+        searchParams.add(scanner.nextLine());
+        System.out.print("(Required) Departure date (YYYY-MM-DD): ");
+        searchParams.add(scanner.nextLine());
+
+
+        System.out.print("(Optional) Return date (YYYY-MM-DD): ");
+        searchParams.add(scanner.nextLine());
+        searchParams.add(null);
+        searchParams.add(null);
+        System.out.print("(Required) Number of adults: ");
+        searchParams.add(scanner.nextLine());
+        System.out.print("(Optional) Number of children: ");
+        searchParams.add(scanner.nextLine());
+        System.out.print("(Optional) Number of infants: ");
+        searchParams.add(scanner.nextLine());
+        searchParams.add(null);
+        searchParams.add(null);
+        System.out.print("(Optional) Nonstop (true or false): ");
+        searchParams.add(scanner.nextLine());
+        System.out.print("(Optional) Max price: ");
+        searchParams.add(scanner.nextLine());
+        searchParams.add(null);
+        System.out.print("(Optional) Travel Class (ECONOMY, PREMIUM ECONOMY, BUSINESS, FIRST): ");
+        searchParams.add(scanner.nextLine());
+        System.out.print("(Optional) Number of results to display: ");
+        searchParams.add(scanner.nextLine());
+
+        flightOptions = flightBooking.provideOptions(searchParams);
+        for (int i = 0; i < flightOptions.size(); i++) {
+            System.out.println("Itinerary #" + i+1);
+            System.out.println(flightOptions.get(i));
+        }
+        System.out.println("Enter the number next to your desired itinerary: ");
+        selection = scanner.nextInt();
+
+        scanner.nextLine();
+
+        //traveler.makeRequest(flightOptions.get(selection-1)); //Will request the selected booking but will check to see if it fits within Traveler's budget
+
+
+    }
+
+    public static void displayCarRentalMenu(Scanner scanner, Traveler traveler, Booking carRentalBooking) {
+        System.out.println("*********************");
+        System.out.println("Car Rental Search");
+        System.out.println("*********************");
+        System.out.println();
+        List<String> searchParams = new ArrayList<>();
+        List<String> carRentalOptions;
+        int selection;
+
+        System.out.print("(Required) Enter airport you would like to pick up car from: ");
+        searchParams.add(scanner.nextLine());
+        System.out.print("(Required) Enter pick up date in YYYY-MM-DDThh:mm format, time is optional: ");
+        searchParams.add(scanner.nextLine());
+        System.out.print("{Required) Enter drop off date in YYYY-MM-DDThh:mm format, time is optional:");
+        searchParams.add(scanner.nextLine());
+        //System.out.print("(Optional) Enter your 2 character country code (e.g. US,FR,IT): ");
+        //searchParams.add(scanner.nextLine());
+        carRentalOptions = carRentalBooking.provideOptions(searchParams);
+
+        for(int i = 0; i < carRentalOptions.size(); i++) {
+            System.out.println("Option #" + i+1);
+            System.out.println(carRentalOptions.get(i));
+        }
+        System.out.println("Enter the number next to your desired option: ");
+        selection = scanner.nextInt();
+        scanner.nextLine();
+
+
+    }
    
     public static void displayAccountInformationMenu(Scanner scanner, Traveler traveler) {
 

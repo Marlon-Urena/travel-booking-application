@@ -1,25 +1,21 @@
 
-package FlightPojos;
+package models.flight;
+
+import com.fasterxml.jackson.annotation.*;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "duration",
     "flights"
 })
-public class Inbound {
+public class Outbound {
 
     @JsonProperty("duration")
     private String duration;
@@ -30,17 +26,17 @@ public class Inbound {
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
-    public Inbound() {
+    public Outbound() {
     }
 
     /**
-     * 
+     *
      * @param duration
      * @param flights
      */
-    public Inbound(String duration, List<Flight> flights) {
+    public Outbound(String duration, List<Flight> flights) {
         super();
         this.duration = duration;
         this.flights = flights;
@@ -91,10 +87,10 @@ public class Inbound {
         if (other == this) {
             return true;
         }
-        if ((other instanceof Inbound) == false) {
+        if ((other instanceof Outbound) == false) {
             return false;
         }
-        Inbound rhs = ((Inbound) other);
+        Outbound rhs = ((Outbound) other);
         return new EqualsBuilder().append(duration, rhs.duration).append(flights, rhs.flights).append(additionalProperties, rhs.additionalProperties).isEquals();
     }
 
