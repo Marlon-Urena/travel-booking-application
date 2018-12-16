@@ -25,7 +25,7 @@ public class CarRentalBooking extends Booking{
     }
 
     @Override
-    public List<String> provideOptions(List<String> list) {
+    public List<Object> provideOptions(List<String> list) {
         String location = list.get(0);
         String pickUp = list.get(1);
         String dropOff = list.get(2);
@@ -37,7 +37,7 @@ public class CarRentalBooking extends Booking{
         String rateFilter = null;
         List<String> vehicle = null;
 
-        List<String> carRentalResults = new ArrayList<>();
+        List<Object> carRentalResults = new ArrayList<>();
 
         DefaultApi apiInstance = new DefaultApi();
 
@@ -63,11 +63,8 @@ public class CarRentalBooking extends Booking{
                 for (int j = 0; j < cars.length(); j++) {
                     carResults = cars.getJSONObject(j);
                     drive.setCar(objectMapper.readValue(String.valueOf(carResults), Car.class));
-                    carRentalResults.add(drive.toString());
+                    carRentalResults.add(drive);
                 }
-            }
-            for (int k = 0; k < carRentalResults.size(); k++) {
-                System.out.println(carRentalResults.get(k));
             }
         }
         catch (ApiException e) {
@@ -75,7 +72,7 @@ public class CarRentalBooking extends Booking{
             int beginLoc= responseString.indexOf("message")+12;
             int endLoc = responseString.indexOf("\"\n}");
             String exceptionErrorMessage = responseString.substring(beginLoc,endLoc);
-            List<String> exceptionMessage = new ArrayList<>();
+            List<Object> exceptionMessage = new ArrayList<>();
             exceptionMessage.add(exceptionErrorMessage);
             return exceptionMessage;
         }
