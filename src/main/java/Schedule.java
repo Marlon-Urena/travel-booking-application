@@ -1,39 +1,42 @@
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static java.time.LocalDate.parse;
+
 public class Schedule {
-    private Date startDate;
-    private Date endDate;
-    private SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-    Map<Date, String> scheduleMap = new HashMap<>();
+    private LocalDate startDate;
+    private LocalDate endDate;
+    Map<LocalDate, String> scheduleMap = new HashMap<>();
 
     public boolean setDates(String startDate, String endDate){
         try {
             if (areDatesValid(startDate, endDate)) {
-                this.startDate = format.parse(startDate);
-                this.endDate = format.parse(endDate);
+                this.startDate = parse(startDate);
+                this.endDate = parse(endDate);
                 return true;
             }
-        }catch (ParseException e) {
+        }catch (DateTimeParseException e) {
             return false;
         }
        return false;
     }
 
-    public Date getStartDate(){
+    public LocalDate getStartDate(){
         return this.startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return this.endDate;
     }
 
-    public void addActivityToSchedule(Date date, String activity){
+    public void addActivityToSchedule(LocalDate date, String activity){
         scheduleMap.put(date, activity);
     }
 
@@ -41,38 +44,37 @@ public class Schedule {
         System.out.print(scheduleMap);
     }
 
-    private boolean areDatesValid(String start, String end) {
-        Date date = new Date();
+    public boolean areDatesValid(String start, String end) {
+        LocalDate date = LocalDate.now();
         try {
-            Date startingDate = format.parse(start);
-            Date endingDate = format.parse(end);
-            if (startingDate.after(date)) {
-                if (endingDate.after(startingDate)) {
+            LocalDate startingDate = parse(start);
+            LocalDate endingDate = parse(end);
+            if (startingDate.isAfter(date)) {
+                if (endingDate.isAfter(startingDate)) {
                     return true;
                 }
             }
         }
-        catch (ParseException e) {
+        catch (DateTimeParseException e) {
             System.out.println("One of your dates are not in the valid format. yyyy-MM-dd");
             return false;
         }
         return false;
     }
 
-    public Date isDateValid(String date) throws IOException, ParseException{
-        format.setLenient(false);
-        Date today = new Date();
-        Date testDate;
+    public LocalDate isDateValid(String date) throws IOException, DateTimeParseException{
+        LocalDate today = LocalDate.now();
+        LocalDate testDate;
         try {
-            testDate = format.parse(date);
-            if (testDate.after(today)) {
+            testDate = parse(date);
+            if (testDate.isAfter(today)) {
                 return testDate;
             }
             else {
                 throw new IOException();
             }
         }
-        catch (ParseException e) {
+        catch (DateTimeParseException e) {
             throw e;
         }
     }
