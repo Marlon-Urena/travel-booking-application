@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Date;
 import java.util.Map;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 import static java.time.LocalDate.parse;
 
@@ -21,7 +23,7 @@ public class TravelerAccount {
     private LocalDate dateOfBirth;
     private String email;
     private String password;
-    private Map<Date, File> previousBookingsMap; //Possible to use keyset and store in List so that it may be organized. Booking information will be stored in json format
+    private Map<LocalDate, File> previousBookingsMap; //Possible to use keyset and store in List so that it may be organized. Booking information will be stored in json format
     static String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
     private SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -132,6 +134,26 @@ public class TravelerAccount {
         } else {
             return 0;
         }
+    }
+
+    public void saveBookingInformation(Object booking, Database database) {
+        int length = 8;
+        String chars = "0123456789";
+        String bookingNumber = new Random().ints(length, 0, chars.length())
+                .mapToObj(i -> "" + chars.charAt(i))
+                .collect(Collectors.joining());
+
+        new File(System.getProperty("user.home"), "travel").mkdirs();
+        File filePath = new File(System.getProperty("user.home" + File.separator + "travel" + File.separator + bookingNumber + "-flightBooking.json" ));
+
+        database.addNewBookingData(bookingNumber, filePath);
+
+        LocalDate today = LocalDate.now();
+
+        previousBookingsMap.put(today,filePath);
+
+
+
     }
 }
 
