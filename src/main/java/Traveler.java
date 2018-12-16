@@ -55,14 +55,13 @@ public class Traveler {
             }while (!validDates);
         }
 
-        public void makeRequest(Booking booking) {
-            setDestination();
-            //implementation
+        public void makeRequest(Object booking, Database database) {
+            travelerAccount.saveBookingInformation(booking,database);
         }
 
         public boolean addActivityToSchedule(Activity activity, Estimate estimate){
             boolean isValid = false;
-            Date activityDate;
+            LocalDate activityDate;
 
             System.out.print("Pick an Activity: ");
             activity.printActivityList();
@@ -86,14 +85,13 @@ public class Traveler {
                         return true;
                     }
                 }
-                catch(ParseException e) {
+                catch(DateTimeParseException e) {
                     System.out.println(day + "is invalid date format. Example: yyyy-MM-dd is valid date format.");
                 }
                 catch (IOException e) {
                     System.out.println(day + "is not a valid date. Please pick a date after today's date.");
                 }
             }while(!isValid);
-
 
 
             return false;
