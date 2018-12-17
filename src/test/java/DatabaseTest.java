@@ -43,29 +43,91 @@ public class DatabaseTest {
         assertFalse(isExceptionThrown);
     }
 
-    @DisplayName("Tests that a successful login will return a mathcing traveler account because of a successful login")
+    @DisplayName("Tests that a successful login will be true")
     @Test
-    public void successfulLogin(){
+    public void loginToTravelerAccountSuccessfulLogin(){
         String email = "example22@gmail.com";
         String password = "Password$11";
         String login = email + " " + password;
         Database database = new Database();
         TravelerAccount account = new TravelerAccount(email, password);
-        TravelerAccount account2 = null;
         database.addNewTravelerAccount(account);
 
+        boolean successfulLogin;
+
         try {
-            account2 = database.loginToTravelerAccount(login);
+            successfulLogin = true;
         } catch (Exception e) {
-           account2 = null;
+           successfulLogin = false;
         }
 
-        assertEquals(account, account2);
+        assertTrue(successfulLogin);
     }
 
-
-    @DisplayName("")
+    @DisplayName("Tests that if credentials are incorrect successful login will be false")
     @Test
-    public void searchOldBookingData() {
+    public void loginToTravelerAccountUnsuccessfulLogin(){
+        String email = "example22@gmail.com";
+        String password = "Password$11";
+        String login = " ";
+        Database database = new Database();
+        TravelerAccount account = new TravelerAccount(email, password);
+        database.addNewTravelerAccount(account);
+
+        boolean successfulLogin;
+
+        try { database.loginToTravelerAccount(login);
+            successfulLogin = true;
+        } catch (Exception e) {
+            successfulLogin = false;
+        }
+
+        assertFalse(successfulLogin);
+    }
+
+    @DisplayName("Tests that a successful login attempt will not throw an Exception")
+    @Test
+    public void loginToTravelerAccountSuccessfulLoginShouldNotThrowException(){
+        String email = "example22@gmail.com";
+        String password = "Password$11";
+        String login = email + " " + password;
+        Database database = new Database();
+        TravelerAccount account = new TravelerAccount(email, password);
+        database.addNewTravelerAccount(account);
+
+        boolean isExceptionThrown;
+
+        try { database.loginToTravelerAccount(login);
+            isExceptionThrown= false;
+        } catch (RuntimeException e) {
+            isExceptionThrown = true;
+        } catch (Exception e) {
+            isExceptionThrown = true;
+        }
+
+        assertFalse(isExceptionThrown);
+    }
+
+    @DisplayName("Tests that a unsuccessful login attempt will throw an Exception")
+    @Test
+    public void loginToTravelerAccountUnsuccessfulLoginShouldThrowException(){
+        String email = "example22@gmail.com";
+        String password = "Password$11";
+        String login = " ";
+        Database database = new Database();
+        TravelerAccount account = new TravelerAccount(email, password);
+        database.addNewTravelerAccount(account);
+
+        boolean isExceptionThrown;
+
+        try { database.loginToTravelerAccount(login);
+            isExceptionThrown= false;
+        } catch (RuntimeException e) {
+            isExceptionThrown = true;
+        } catch (Exception e) {
+            isExceptionThrown = true;
+        }
+
+        assertTrue(isExceptionThrown);
     }
 }
