@@ -47,7 +47,7 @@ public class CarRentalBooking extends Booking{
             ObjectMapper objectMapper = new ObjectMapper();
             String jsonString = gson.toJson(response);
 
-            JSONObject jsonObject = new JSONObject("results");
+            JSONObject jsonObject = new JSONObject(jsonString);
             JSONArray search = jsonObject.getJSONArray("results");
 
             JSONObject searchResults;
