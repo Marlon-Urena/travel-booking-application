@@ -1,3 +1,4 @@
+import io.swagger.client.api.DefaultApi;
 import org.apache.commons.validator.routines.EmailValidator;
 
 import java.awt.print.Book;
@@ -16,6 +17,7 @@ public class TravelProgram{
     public static void main(String [] args) throws ParseException {
         TravelerAccount travelerAccount = null;
         Database database= new Database();
+        DefaultApi apiInstance = new DefaultApi();
 
         Schedule schedule = new Schedule();
 
@@ -24,9 +26,9 @@ public class TravelProgram{
         Activity activity = new Activity();
         Traveler traveler = new Traveler(schedule, budget);
 
-        Booking flightBooking = new FlightBooking(estimate, schedule);
+        Booking flightBooking = new FlightBooking(apiInstance);
         //Booking hotelBooking = new HotelBooking();
-        Booking carRentalBooking = new CarRentalBooking(estimate, schedule);
+        Booking carRentalBooking = new CarRentalBooking(apiInstance);
         //Booking trainBooking = new TrainBooking();
         List<Booking> bookingOptions = new ArrayList<>();
 

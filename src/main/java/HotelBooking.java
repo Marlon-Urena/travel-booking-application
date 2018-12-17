@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class HotelBooking extends Booking {
@@ -16,9 +17,9 @@ public class HotelBooking extends Booking {
     }
 
     @Override
-    public List<String> provideOptions(List<String> list) {
-    System.out.print("hey");
-    return list;
+    public List<Object> provideOptions(List<String> list) {
+        List<Object> object = new ArrayList<>();
+        return object;
     }
 
 }

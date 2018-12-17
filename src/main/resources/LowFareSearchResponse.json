@@ -1,0 +1,135 @@
+{
+  "currency": "USD",
+  "results": [
+    {
+      "itineraries": [
+        {
+          "outbound": {
+            "duration": "13:55",
+            "flights": [
+              {
+                "departs_at": "2018-12-23T17:55",
+                "arrives_at": "2018-12-24T07:35",
+                "origin": {
+                  "airport": "EWR",
+                  "terminal": "B"
+                },
+                "destination": {
+                  "airport": "ARN",
+                  "terminal": "5"
+                },
+                "marketing_airline": "SK",
+                "operating_airline": "SK",
+                "flight_number": "904",
+                "aircraft": "333",
+                "booking_info": {
+                  "travel_class": "ECONOMY",
+                  "booking_code": "V",
+                  "seats_remaining": 9
+                }
+              },
+              {
+                "departs_at": "2018-12-24T11:05",
+                "arrives_at": "2018-12-24T12:50",
+                "origin": {
+                  "airport": "ARN",
+                  "terminal": "5"
+                },
+                "destination": {
+                  "airport": "LHR",
+                  "terminal": "2"
+                },
+                "marketing_airline": "SK",
+                "operating_airline": "SK",
+                "flight_number": "531",
+                "aircraft": "32A",
+                "booking_info": {
+                  "travel_class": "ECONOMY",
+                  "booking_code": "V",
+                  "seats_remaining": 9
+                }
+              }
+            ]
+          },
+          "inbound": {
+            "duration": "45:55",
+            "flights": [
+              {
+                "departs_at": "2018-12-28T20:30",
+                "arrives_at": "2018-12-28T23:25",
+                "origin": {
+                  "airport": "LHR",
+                  "terminal": "2"
+                },
+                "destination": {
+                  "airport": "CPH",
+                  "terminal": "3"
+                },
+                "marketing_airline": "SK",
+                "operating_airline": "SK",
+                "flight_number": "1508",
+                "aircraft": "32A",
+                "booking_info": {
+                  "travel_class": "ECONOMY",
+                  "booking_code": "V",
+                  "seats_remaining": 9
+                }
+              },
+              {
+                "departs_at": "2018-12-29T11:50",
+                "arrives_at": "2018-12-29T13:00",
+                "origin": {
+                  "airport": "CPH",
+                  "terminal": "3"
+                },
+                "destination": {
+                  "airport": "OSL"
+                },
+                "marketing_airline": "SK",
+                "operating_airline": "SK",
+                "flight_number": "1458",
+                "aircraft": "321",
+                "booking_info": {
+                  "travel_class": "ECONOMY",
+                  "booking_code": "V",
+                  "seats_remaining": 4
+                }
+              },
+              {
+                "departs_at": "2018-12-30T11:00",
+                "arrives_at": "2018-12-30T13:25",
+                "origin": {
+                  "airport": "OSL"
+                },
+                "destination": {
+                  "airport": "EWR",
+                  "terminal": "B"
+                },
+                "marketing_airline": "SK",
+                "operating_airline": "SK",
+                "flight_number": "907",
+                "aircraft": "333",
+                "booking_info": {
+                  "travel_class": "ECONOMY",
+                  "booking_code": "V",
+                  "seats_remaining": 9
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "fare": {
+        "total_price": "1229.90",
+        "price_per_adult": {
+          "total_fare": "1229.90",
+          "tax": "564.90"
+        },
+        "restrictions": {
+          "refundable": false,
+          "change_penalties": true
+        }
+      }
+    }
+  ]
+}

@@ -14,9 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarRentalBooking extends Booking{
+    private DefaultApi apiInstance;
 
-    public CarRentalBooking(Estimate estimate, Schedule schedule) {
-
+    public CarRentalBooking(DefaultApi apiInstance) {
+        this.apiInstance = apiInstance;
     }
 
     @Override
@@ -38,8 +39,6 @@ public class CarRentalBooking extends Booking{
         List<String> vehicle = null;
 
         List<Object> carRentalResults = new ArrayList<>();
-
-        DefaultApi apiInstance = new DefaultApi();
 
         try {
             CarSearchResponse response = apiInstance.carRentalAirportSearch(apiKey,location, pickUp, dropOff, lang, currency, provider, rateClass, ratePlan, rateFilter, vehicle);

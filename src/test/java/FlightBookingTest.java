@@ -1,16 +1,21 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 import io.swagger.client.ApiException;
 import io.swagger.client.api.DefaultApi;
-import io.swagger.client.model.CarSearchResponse;
-import models.carrental.Car;
-import models.carrental.CarRentalSearch;
-import models.carrental.Result;
+import io.swagger.client.model.LowFareSearchResponse;
+
+import models.flight.Fare;
+import models.flight.FlightSearch;
+import models.flight.Inbound;
+import models.flight.Outbound;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,51 +30,29 @@ class FlightBookingTest {
     @DisplayName("Verify that we can successfully receive a nice string response")
     @Test
     void successfullyReturnStringItinerary() {
-        DefaultApi apiInstance = new DefaultApiMock();
-        String apiKey ="blah blah"
-        String location = "JFK";
-        String pickUp = "2018-12-22";
-        String dropOff = "2018-12-23";
-        String lang = null;
-        String currency = null;
-        String provider = null;
-        String rateClass = null;
-        String ratePlan = null;
-        String rateFilter = null;
-        List<String> vehicle = null;
+            DefaultApi mockInstance = new DefaultApiMock();
+            Booking flightBooking = new FlightBooking(mockInstance);
 
-        List<String> carRentalResults = new ArrayList<>();
+            List<String> listOfNothing = new ArrayList<>();
+            for (int i = 0; i < 15; i++)
+                listOfNothing.add(null);
 
-        try {
-            CarSearchResponse response = apiInstance.carRentalAirportSearch(apiKey, location, pickUp, dropOff, lang, currency, provider, rateClass, ratePlan, rateFilter, vehicle);
+            List<Object> listOfOptions = flightBooking.provideOptions(listOfNothing);
 
-            Gson gson = new Gson();
-            String jsonString = gson.toJson(response);
-            ObjectMapper objectMapper = new ObjectMapper();
+            String responsePath = ("src" + File.separator + "main" + File.separator + "resources" + File.separator + "LowFareSearchString");
+            File file = new File(responsePath).getAbsoluteFile();
+            boolean successful = false;
+            try {
+                ObjectMapper objectMapper = new ObjectMapper();
+                FlightSearch searchString = objectMapper.readValue(file, FlightSearch.class);
+                assertEquals(searchString, listOfOptions.get(0));
 
-            JSONObject jsonObject = new JSONObject(jsonString);
-            JSONArray search = jsonObject.getJSONArray("results");
-
-            JSONObject searchResults;
-            JSONArray cars;
-            JSONObject carResults;
-
-            CarRentalSearch drive = objectMapper.readValue(jsonString, CarRentalSearch.class);
-            for (int i = 0; i < search.length(); i++) {
-                searchResults = search.getJSONObject(i);
-                drive.setResult(objectMapper.readValue(String.valueOf(searchResults), Result.class));
-                cars = searchResults.getJSONArray("cars");
-                for (int j = 0; j < cars.length(); j++) {
-                    carResults = cars.getJSONObject(j);
-                    drive.setCar(objectMapper.readValue(String.valueOf(carResults), Car.class));
-                    carRentalResults.add(drive.toString());
-                }
             }
-        }catch (ApiException e) {
+            catch (IOException e) {
+                successful = false;
+            }
 
-        }
-        catch (IOException e) {
 
-        }
+
     }
 }

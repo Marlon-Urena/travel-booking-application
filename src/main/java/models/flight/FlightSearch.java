@@ -8,6 +8,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -35,8 +36,31 @@ public class FlightSearch {
     private BookingInfo bookingInfo ;
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FlightSearch that = (FlightSearch) o;
+        return Objects.equals(currency, that.currency) &&
+                Objects.equals(results, that.results) &&
+                Objects.equals(fare, that.fare) &&
+                Objects.equals(pricePerAdult, that.pricePerAdult) &&
+                Objects.equals(pricePerChild, that.pricePerChild) &&
+                Objects.equals(pricePerInfant, that.pricePerInfant) &&
+                Objects.equals(itinerary, that.itinerary) &&
+                Objects.equals(inbound, that.inbound) &&
+                Objects.equals(outbound, that.outbound) &&
+                Objects.equals(flight, that.flight) &&
+                Objects.equals(origin, that.origin) &&
+                Objects.equals(destination, that.destination) &&
+                Objects.equals(bookingInfo, that.bookingInfo) &&
+                Objects.equals(additionalProperties, that.additionalProperties);
+    }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(currency, results, fare, pricePerAdult, pricePerChild, pricePerInfant, itinerary, inbound, outbound, flight, origin, destination, bookingInfo, additionalProperties);
+    }
 
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
@@ -159,23 +183,6 @@ public class FlightSearch {
             sb.append("Price per infant: " + pricePerInfant.toString() + " " + currency + "\n" );
         }
         return sb.toString();
-    }
-
-    @Override
-    public int hashCode() {
-        return new HashCodeBuilder().append(results).append(additionalProperties).append(currency).toHashCode();
-    }
-
-    @Override
-    public boolean equals(Object other) {
-        if (other == this) {
-            return true;
-        }
-        if ((other instanceof FlightSearch) == false) {
-            return false;
-        }
-        FlightSearch rhs = ((FlightSearch) other);
-        return new EqualsBuilder().append(results, rhs.results).append(additionalProperties, rhs.additionalProperties).append(currency, rhs.currency).isEquals();
     }
 
 }

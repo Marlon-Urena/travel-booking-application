@@ -1,1417 +1,209 @@
-class CarSearchResponse {
-  results: [class CarSearchResult {
-    provider: class Company {
-    companyCode: AD
-    companyName: ADVANTAGE
-  }
-    location: class Geolocation {
-      latitude: 40.63861
-      longitude: -73.76194
-      googleMapsLink: null
-    }
-    airport: JFK
-    cars: [class Vehicle {
-      vehicleInfo: class VehicleInfo {
-      acrissCode: IFAR
-      category: Intermediate
-      type: SUV
-      transmission: Automatic
-      airConditioning: true
-      fuel: Unspecified
-    }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 111.76
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 223.52
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=AD&cnt=US&vehcat=IFAR&item=0&stamp=VEHICLE_0__0__1457386903065&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: XXAR
-        category: Special
-        type: Special
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 139.00
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 278.00
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=AD&cnt=US&vehcat=XXAR&item=0&stamp=VEHICLE_0__0__1472154964599&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: CCAR
-        category: Compact
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 174.26
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 348.52
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=AD&cnt=US&vehcat=CCAR&item=0&stamp=VEHICLE_0__0__1519239786098&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: ECAR
-        category: Economy
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 174.26
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 348.52
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=AD&cnt=US&vehcat=ECAR&item=0&stamp=VEHICLE_0__0__1519239747120&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: ICAR
-        category: Intermediate
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 179.49
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 358.98
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=AD&cnt=US&vehcat=ICAR&item=0&stamp=VEHICLE_0__0__1519239840848&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: SCAR
-        category: Standard
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 183.73
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 367.46
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=AD&cnt=US&vehcat=SCAR&item=0&stamp=VEHICLE_0__0__1519239876097&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: FCAR
-        category: Fullsize
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 184.73
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 369.46
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=AD&cnt=US&vehcat=FCAR&item=0&stamp=VEHICLE_0__0__1519356091325&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: PCAR
-        category: Premium
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 215.00
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 430.00
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=AD&cnt=US&vehcat=PCAR&item=0&stamp=VEHICLE_0__0__1457385530201&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: MVAR
-        category: Mini
-        type: Passenger van
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 275.00
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 550.00
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=AD&cnt=US&vehcat=MVAR&item=0&stamp=VEHICLE_0__0__1457385460853&file=1.JPEG
-      }]
-    }]
-  }, class CarSearchResult {
-      provider: class Company {
-      companyCode: ZI
-      companyName: AVIS
-    }
-    location: class Geolocation {
-      latitude: 40.63861
-      longitude: -73.76194
-      googleMapsLink: null
-    }
-    airport: JFK
-    cars: [class Vehicle {
-      vehicleInfo: class VehicleInfo {
-      acrissCode: ECAR
-      category: Economy
-      type: 2/4 Door
-      transmission: Automatic
-      airConditioning: true
-      fuel: Unspecified
-    }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 85.00
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 233.62
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=US&sta=NY&vehcat=ECAR&item=0&stamp=VEHICLE_y2008_m01_d01___y2025_m12_d31___1347910756672&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: CCAR
-        category: Compact
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 88.80
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 243.74
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=US&sta=NY&vehcat=CCAR&item=0&stamp=VEHICLE_y2008_m01_d01___y2025_m12_d31___1347910715922&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: ICAR
-        category: Intermediate
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 92.20
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 252.80
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=US&sta=NY&vehcat=ICAR&item=0&stamp=VEHICLE_y2008_m01_d01___y2025_m12_d31___1347910922907&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: FCAR
-        category: Fullsize
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 98.20
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 268.78
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=US&sta=NY&vehcat=FCAR&item=0&stamp=VEHICLE_y2008_m01_d01___y2025_m12_d31___1347910784793&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: SCAR
-        category: Standard
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 98.20
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 268.78
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=US&sta=NY&vehcat=SCAR&item=0&stamp=VEHICLE_y2008_m01_d01___y2025_m12_d31___1347911265879&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: IFAR
-        category: Intermediate
-        type: SUV
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 123.80
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 336.98
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=US&sta=NY&vehcat=IFAR&item=0&stamp=VEHICLE_y2008_m01_d01___y2025_m12_d31___1347910963957&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: PCAR
-        category: Premium
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 125.60
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 341.78
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=US&sta=NY&vehcat=PCAR&item=0&stamp=VEHICLE_y2008_m01_d01___y2025_m12_d31___1351105149778&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: LCAR
-        category: Luxury
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 125.80
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 342.30
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=US&sta=NY&vehcat=LCAR&item=0&stamp=VEHICLE_y2008_m01_d01___y2025_m12_d31___1351105110529&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: SFAR
-        category: Standard
-        type: SUV
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 136.20
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 370.01
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=US&sta=NY&vehcat=SFAR&item=0&stamp=VEHICLE_0__0__1347910674384&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: STAR
-        category: Standard
-        type: Convertible
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 199.60
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 538.90
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=US&sta=NY&vehcat=STAR&item=0&stamp=VEHICLE_y2008_m01_d01___y2025_m12_d31___1347911346165&file=1.JPEG
-      }]
-    }]
-  }, class CarSearchResult {
-      provider: class Company {
-      companyCode: ZD
-      companyName: BUDGET
-    }
-    location: class Geolocation {
-      latitude: 40.63861
-      longitude: -73.76194
-      googleMapsLink: null
-    }
-    airport: JFK
-    cars: [class Vehicle {
-      vehicleInfo: class VehicleInfo {
-      acrissCode: ECAR
-      category: Economy
-      type: 2/4 Door
-      transmission: Automatic
-      airConditioning: true
-      fuel: Unspecified
-    }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 89.35
-      }
-      }, class Rate {
-          type: DAILY
-          price: class Amount {
-          currency: EUR
-          amount: 78.60
+{
+  "results": [
+    {
+      "provider": {
+        "company_code": "ZT",
+        "company_name": "THRIFTY"
+      },
+      "location": {
+        "latitude": 37.61889,
+        "longitude": -12.23756
+      },
+      "airport": "SFO",
+      "address": {
+        "line1": "780 MCDONNELL ROAD",
+        "city": "SAN FRANCISCO",
+        "region": "CA",
+        "country": "US"
+      },
+      "cars": [
+        {
+          "vehicle_info": {
+            "acriss_code": "XX",
+            "transmission": "No information available",
+            "fuel": "No information available",
+            "category": "Special",
+            "type": "Special"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "84.64",
+                "currency": "USD"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "http://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZT&cnt=US&sta=CA&vehcat=XX&item=0&stamp=VEHICLE_0_0_1285865537042&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "172.94",
+            "currency": "USD"
+          }
+        }, {
+          "vehicle_info": {
+            "acriss_code": "IFAR",
+            "transmission": "Automatic",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Intermediate",
+            "type": "SUV"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "144.53",
+                "currency": "USD"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "http://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZT&cnt=US&sta=CA&vehcat=IFAR&item=0&stamp=VEHICLE_0_0_1285865537042&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "281.14",
+            "currency": "USD"
+          }
+        }, {
+          "vehicle_info": {
+            "acriss_code": "STAR",
+            "transmission": "Automatic",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Standard",
+            "type": "Convertible"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "319.77",
+                "currency": "USD"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "http://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZT&cnt=US&sta=CA&vehcat=STAR&item=0&stamp=VEHICLE_0_0_1285865537042&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "593.64",
+            "currency": "USD"
+          }
         }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 178.69
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZD&cnt=US&sta=NY&vehcat=ECAR&item=0&stamp=VEHICLE_0__0__1444422420102&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: CCAR
-        category: Compact
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 90.94
-      }
-      }, class Rate {
-          type: DAILY
-          price: class Amount {
-          currency: EUR
-          amount: 80.00
+      ]
+    }, {
+      "provider": {
+        "company_code": "ZD",
+        "company_name": "BUDGET"
+      },
+      "location": {
+        "latitude": 37.61889,
+        "longitude": -12.23756
+      },
+      "airport": "SFO",
+      "address": {
+        "line1": "SAN FRANCISCO INTL APO",
+        "city": "SAN FRANCISCO",
+        "region": "CA",
+        "country": "US"
+      },
+      "cars": [
+        {
+          "vehicle_info": {
+            "acriss_code": "PCAR",
+            "transmission": "Automatic",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Premium",
+            "type": "2/4 Door"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "272.28",
+                "currency": "USD"
+              }
+            }, {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "253.00",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "http://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZD&cnt=US&sta=CA&vehcat=PCAR&item=0&stamp=VEHICLE_0__0__1384438228247&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "435.65",
+            "currency": "USD"
+          }
         }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 181.88
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZD&cnt=US&sta=NY&vehcat=CCAR&item=0&stamp=VEHICLE_0__0__1538586165273&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: ICAR
-        category: Intermediate
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 92.76
-      }
-      }, class Rate {
-          type: DAILY
-          price: class Amount {
-          currency: EUR
-          amount: 81.60
+      ]
+    }, {
+      "provider": {
+        "company_code": "ZL",
+        "company_name": "NATIONAL"
+      },
+      "location": {
+        "latitude": 37.6293,
+        "longitude": -122.40015
+      },
+      "airport": "SFO",
+      "address": {
+        "line1": "780 MCDONNELL ROAD",
+        "city": " SAN FRANCISCO",
+        "region": "CA",
+        "country": "US"
+      },
+      "cars": [
+        {
+          "vehicle_info": {
+            "acriss_code": "IGAR",
+            "transmission": "Automatic",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Intermediate",
+            "type": "Crossover"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1299.99",
+                "currency": "USD"
+              }
+            }
+          ],
+          "estimated_total": {
+            "amount": "2481.10",
+            "currency": "USD"
+          }
         }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 185.51
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZD&cnt=US&sta=NY&vehcat=ICAR&item=0&stamp=VEHICLE_0__0__1538671604794&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: SCAR
-        category: Standard
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 96.62
-      }
-      }, class Rate {
-          type: DAILY
-          price: class Amount {
-          currency: EUR
-          amount: 85.00
-        }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 193.24
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZD&cnt=US&sta=NY&vehcat=SCAR&item=0&stamp=VEHICLE_0__0__1538672229815&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: FCAR
-        category: Fullsize
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 99.35
-      }
-      }, class Rate {
-          type: DAILY
-          price: class Amount {
-          currency: EUR
-          amount: 87.40
-        }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 198.70
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZD&cnt=US&sta=NY&vehcat=FCAR&item=0&stamp=VEHICLE_0__0__1538672549172&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: IFAR
-        category: Intermediate
-        type: SUV
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 99.80
-      }
-      }, class Rate {
-          type: DAILY
-          price: class Amount {
-          currency: EUR
-          amount: 87.80
-        }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 199.61
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZD&cnt=US&sta=NY&vehcat=IFAR&item=0&stamp=VEHICLE_0__0__1290427475670&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: PCAR
-        category: Premium
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 117.54
-      }
-      }, class Rate {
-          type: DAILY
-          price: class Amount {
-          currency: EUR
-          amount: 103.40
-        }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 235.07
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZD&cnt=US&sta=NY&vehcat=PCAR&item=0&stamp=VEHICLE_0__0__1502976907451&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: SFAR
-        category: Standard
-        type: SUV
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 117.54
-      }
-      }, class Rate {
-          type: DAILY
-          price: class Amount {
-          currency: EUR
-          amount: 103.40
-        }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 235.07
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZD&cnt=US&sta=NY&vehcat=SFAR&item=0&stamp=VEHICLE_0__0__1538588631415&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: LCAR
-        category: Luxury
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 142.54
-      }
-      }, class Rate {
-          type: DAILY
-          price: class Amount {
-          currency: EUR
-          amount: 125.40
-        }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 285.09
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZD&cnt=US&sta=NY&vehcat=LCAR&item=0&stamp=VEHICLE_0__0__1351106492321&file=1.JPEG
-      }]
-    }]
-  }, class CarSearchResult {
-      provider: class Company {
-      companyCode: EP
-      companyName: EUROPCAR
+      ]
     }
-    location: class Geolocation {
-      latitude: 40.63861
-      longitude: -73.76194
-      googleMapsLink: null
-    }
-    airport: JFK
-    cars: [class Vehicle {
-      vehicleInfo: class VehicleInfo {
-      acrissCode: ECAR
-      category: Economy
-      type: 2/4 Door
-      transmission: Automatic
-      airConditioning: true
-      fuel: Unspecified
-    }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 199.99
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 399.99
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=EP&cnt=US&vehcat=ECAR&item=0&stamp=VEHICLE_0_0_1498118415489&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: CCAR
-        category: Compact
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 201.26
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 402.51
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=EP&cnt=US&vehcat=CCAR&item=0&stamp=VEHICLE_0_0_1498118415489&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: ICAR
-        category: Intermediate
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 209.75
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 419.51
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=EP&cnt=US&vehcat=ICAR&item=0&stamp=VEHICLE_0_0_1498118415489&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: SCAR
-        category: Standard
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 212.25
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 424.50
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=EP&cnt=US&vehcat=SCAR&item=0&stamp=VEHICLE_0_0_1498118415489&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: FCAR
-        category: Fullsize
-        type: 2/4 Door
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 217.25
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 434.49
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=EP&cnt=US&vehcat=FCAR&item=0&stamp=VEHICLE_0_0_1493916475494&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: IFAR
-        category: Intermediate
-        type: SUV
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 237.25
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 474.50
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=EP&cnt=US&vehcat=IFAR&item=0&stamp=VEHICLE_0_0_1493916475494&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: SFAR
-        category: Standard
-        type: SUV
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 274.75
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 549.50
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=EP&cnt=US&vehcat=SFAR&item=0&stamp=VEHICLE_0_0_1498118415489&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: MVAR
-        category: Mini
-        type: Passenger van
-        transmission: Automatic
-        airConditioning: true
-        fuel: Unspecified
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 274.75
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 549.50
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=EP&cnt=US&vehcat=MVAR&item=0&stamp=VEHICLE_0_0_1493916475494&file=1.JPEG
-      }]
-    }]
-  }, class CarSearchResult {
-      provider: class Company {
-      companyCode: ZU
-      companyName: AUTO EUROPE
-    }
-    location: class Geolocation {
-      latitude: 40.64708
-      longitude: -73.78613
-      googleMapsLink: null
-    }
-    airport: JFK
-    cars: [class Vehicle {
-      vehicleInfo: class VehicleInfo {
-      acrissCode: CD
-      category: Compact
-      type: 4-5 Door
-      transmission: No information available
-      airConditioning: null
-      fuel: No information available
-    }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 72.31
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 144.62
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=CD&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: ED
-        category: Economy
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 72.31
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 144.62
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=ED&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: ED
-        category: Economy
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 72.31
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 144.62
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=ED&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: ID
-        category: Intermediate
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 75.39
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 150.77
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=ID&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: SD
-        category: Standard
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 78.46
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 156.92
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=SD&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: CD
-        category: Compact
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 80.93
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 161.85
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=CD&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: FD
-        category: Fullsize
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 83.08
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 166.15
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=FD&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: ID
-        category: Intermediate
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 85.23
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 170.46
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=ID&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: SD
-        category: Standard
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 92.00
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 184.00
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=SD&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: FD
-        category: Fullsize
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 93.85
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 187.69
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=FD&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: PD
-        category: Premium
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 107.69
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 215.38
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=PD&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: PD
-        category: Premium
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 112.00
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 224.00
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=PD&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: LD
-        category: Luxury
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 127.69
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 255.38
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=LD&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }, class Vehicle {
-        vehicleInfo: class VehicleInfo {
-        acrissCode: LD
-        category: Luxury
-        type: 4-5 Door
-        transmission: No information available
-        airConditioning: null
-        fuel: No information available
-      }
-      rates: [class Rate {
-        type: DAILY
-        price: class Amount {
-        currency: USD
-        amount: 135.39
-      }
-      }]
-      estimatedTotal: class Amount {
-        currency: USD
-        amount: 270.77
-      }
-      images: [class Image {
-        category: VEHICLE
-        width: 90
-        height: 50
-        url: https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZU&cnt=US&vehcat=LD&item=0&stamp=VEHICLE_0_0_1476795603910&file=1.JPEG
-      }]
-    }]
-  }]
+  ]
 }

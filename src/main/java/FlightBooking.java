@@ -15,8 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FlightBooking extends Booking{
-    private Estimate estimate;
-    private Schedule schedule;
+    private DefaultApi apiInstance;
 
     private enum mealOption {
         VEGAN, BABY, KOSHER, LOW_SODIUM, NON_LACTOSE,
@@ -26,11 +25,9 @@ public class FlightBooking extends Booking{
         ECONOMY, BUSINESS, FIRST_CLASS
         } //May have to rethink these enums based off the class of the seat
 
-    public FlightBooking(Estimate estimate, Schedule schedule){
-        this.estimate= estimate;
-        this.schedule= schedule;
+    public FlightBooking(DefaultApi apiInstance){
+        this.apiInstance = apiInstance;
     }
-
 
     @Override
     public void receiveRequest(Estimate estimate, Schedule schedule) {
@@ -57,12 +54,7 @@ public class FlightBooking extends Booking{
         String travelClass = list.get(14);
         Integer number_of_results = 1;
 
-
-
-
         List<Object> flightResults = new ArrayList<>();
-
-        DefaultApi apiInstance = new DefaultApi();
 
         try {
             LowFareSearchResponse response = apiInstance.flightLowFareSearch(apiKey, origin, destination, departure_date, return_date, arrive_by, return_by, adults, children, infants, include_airlines, exclude_airlines, nonstop, max_price, currency, travelClass, number_of_results);

@@ -8,6 +8,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -76,20 +77,18 @@ public class CarRentalSearch {
     }
 
     @Override
-    public int hashCode() {
-        return new HashCodeBuilder().append(results).append(additionalProperties).toHashCode();
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CarRentalSearch that = (CarRentalSearch) o;
+        return Objects.equals(results, that.results) &&
+                Objects.equals(result, that.result) &&
+                Objects.equals(car, that.car) &&
+                Objects.equals(additionalProperties, that.additionalProperties);
     }
 
     @Override
-    public boolean equals(Object other) {
-        if (other == this) {
-            return true;
-        }
-        if ((other instanceof CarRentalSearch) == false) {
-            return false;
-        }
-        CarRentalSearch rhs = ((CarRentalSearch) other);
-        return new EqualsBuilder().append(results, rhs.results).append(additionalProperties, rhs.additionalProperties).isEquals();
+    public int hashCode() {
+        return Objects.hash(results, result, car, additionalProperties);
     }
-
 }
