@@ -9,6 +9,7 @@ import models.carrental.Result;
 import models.flight.FlightSearch;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -24,34 +25,37 @@ class CarRentalBookingTest extends io.swagger.client.api.DefaultApi{
     void receiveRequest() {
     }
 
+    @DisplayName ("Verify that we are receiving a nice string response")
     @Test
     void provideOptions() {
-        DefaultApi mockInstance = new DefaultApiMock();
-        Booking carRentalBooking = new CarRentalBooking(mockInstance);
-
-        List<String> listOfNothing = new ArrayList<>();
-        for (int i = 0; i < 9; i++)
-            listOfNothing.add(null);
-
-        List<Object> listOfOptions = carRentalBooking.provideOptions(listOfNothing);
-
-        String firstStringPath = ("src" + File.separator + "main" + File.separator + "resources" + File.separator + "CarRentalSearchString");
-        File file1 = new File(firstStringPath).getAbsoluteFile();
-
-        String secondStringPath = ("src" + File.separator + "main" + File.separator + "resources" + File.separator + "CarRentalSearchString(1)");
-        File file2 = new File(secondStringPath).getAbsoluteFile();
-
-        boolean successful = false;
         try {
+            DefaultApi mockInstance = new DefaultApiMock();
+            Booking carRentalBooking = new CarRentalBooking(mockInstance);
+
+            List<String> listOfNothing = new ArrayList<>();
+            for (int i = 0; i < 9; i++)
+                listOfNothing.add(null);
+
+            List<Object> listOfOptions = carRentalBooking.provideOptions(listOfNothing);
+
+            String firstStringPath = ("src" + File.separator + "main" + File.separator + "resources" + File.separator + "CarRentalSearchString");
+            File file1 = new File(firstStringPath).getAbsoluteFile();
+
+            String secondStringPath = ("src" + File.separator + "main" + File.separator + "resources" + File.separator + "CarRentalSearchString(1)");
+            File file2 = new File(secondStringPath).getAbsoluteFile();
+
+            boolean successful = false;
+
             ObjectMapper objectMapper = new ObjectMapper();
             CarRentalSearch searchString = objectMapper.readValue(file1, CarRentalSearch.class);
             assertEquals(searchString, listOfOptions.get(0));
 
             searchString = objectMapper.readValue(file2, CarRentalSearch.class);
             assertEquals(searchString, listOfOptions.get(1));
+
+        }catch (ApiException e) {
         }
         catch (IOException e) {
-            successful = false;
         }
     }
 }

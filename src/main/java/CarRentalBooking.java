@@ -26,7 +26,7 @@ public class CarRentalBooking extends Booking{
     }
 
     @Override
-    public List<Object> provideOptions(List<String> list) {
+    public List<Object> provideOptions(List<String> list) throws ApiException{
         String location = list.get(0);
         String pickUp = list.get(1);
         String dropOff = list.get(2);
@@ -67,13 +67,7 @@ public class CarRentalBooking extends Booking{
             }
         }
         catch (ApiException e) {
-            String responseString = e.getResponseBody();
-            int beginLoc= responseString.indexOf("message")+12;
-            int endLoc = responseString.indexOf("\"\n}");
-            String exceptionErrorMessage = responseString.substring(beginLoc,endLoc);
-            List<Object> exceptionMessage = new ArrayList<>();
-            exceptionMessage.add(exceptionErrorMessage);
-            return exceptionMessage;
+            throw e;
         }
         catch (IOException e) {
 

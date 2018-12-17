@@ -35,7 +35,7 @@ public class FlightBooking extends Booking{
     }
 
     @Override
-    public List<Object> provideOptions(List<String> list) {
+    public List<Object> provideOptions(List<String> list) throws ApiException{
         List<Object> defaultParamsList = new ArrayList<>();
         String origin = String.valueOf(list.get(0));
         String destination = String.valueOf(list.get(1));
@@ -93,13 +93,7 @@ public class FlightBooking extends Booking{
                 }
             }
         }catch (ApiException e) {
-            String responseString = e.getResponseBody();
-            int beginLoc= responseString.indexOf("message")+12;
-            int endLoc = responseString.indexOf("\"\n}");
-            String exceptionErrorMessage = responseString.substring(beginLoc,endLoc);
-            List<Object> exceptionMessage = new ArrayList<>();
-            exceptionMessage.add(exceptionErrorMessage);
-            return exceptionMessage;
+            throw e;
         }
         catch (IOException e) {
 

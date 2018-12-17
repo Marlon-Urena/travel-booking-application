@@ -30,6 +30,7 @@ class FlightBookingTest {
     @DisplayName("Verify that we can successfully receive a nice string response")
     @Test
     void successfullyReturnStringItinerary() {
+        try {
             DefaultApi mockInstance = new DefaultApiMock();
             Booking flightBooking = new FlightBooking(mockInstance);
 
@@ -42,17 +43,15 @@ class FlightBookingTest {
             String responsePath = ("src" + File.separator + "main" + File.separator + "resources" + File.separator + "LowFareSearchString");
             File file = new File(responsePath).getAbsoluteFile();
             boolean successful = false;
-            try {
-                ObjectMapper objectMapper = new ObjectMapper();
-                FlightSearch searchString = objectMapper.readValue(file, FlightSearch.class);
-                assertEquals(searchString, listOfOptions.get(0));
 
-            }
-            catch (IOException e) {
-                successful = false;
-            }
+            ObjectMapper objectMapper = new ObjectMapper();
+            FlightSearch searchString = objectMapper.readValue(file, FlightSearch.class);
+            assertEquals(searchString, listOfOptions.get(0));
 
 
+         }catch (ApiException e) {
 
+         }catch (IOException e) {
+         }
     }
 }
