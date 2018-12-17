@@ -42,11 +42,12 @@ public class TravelProgram{
         Scanner scanner = new Scanner(System.in);
 
             int selection;
-            System.out.print("Hello! \nWould you like to \n 1. Login \n 2. Make a new account \nSelection: ");
-            selection = scanner.nextInt();
-            scanner.nextLine();
             do {
                 while (!signedIn) {
+                    
+                    System.out.print("Hello! \nWould you like to \n 1. Login \n 2. Make a new account \nSelection: ");
+                    selection = scanner.nextInt();
+                    scanner.nextLine();
 
                     if (selection == 1) {
                         traveler.login(loginToTravelerAccount(travelerAccount, database, scanner));
@@ -118,7 +119,7 @@ public class TravelProgram{
     }
 
     public static void displayBookingMenu(Scanner scanner, Database database, Traveler traveler, List<Booking> bookingOptions, Estimate estimate, Activity activity){
-        boolean EXIT = false; 
+         boolean EXIT = false;
         do {
             System.out.println("*********************");
             System.out.println("BOOKING MENU: ");
@@ -126,23 +127,21 @@ public class TravelProgram{
 
             System.out.println("\t1. Book a flight");
             System.out.println("\t2. Rent a car");
-            System.out.println("\t3. Book a hotel");
-            System.out.println("\t4. Book a train ticket");
-            System.out.println("\t5. Add activity to schedule");
-            System.out.println("\t6. Estimate trip cost");
+            System.out.println("\t3. Add activity to schedule");
+            System.out.println("\t4. Estimate trip cost");
+            System.out.print("\t5. Print Schedule");
             System.out.println("\t7. Back to Main Menu");
             System.out.print("\nEnter your selection:");
-            
+
             int response = scanner.nextInt();
             scanner.nextLine();
-            
+
             if(response == 1){displayFlightBookingMenu(scanner, database, traveler, bookingOptions.get(response-1));}
             else if(response == 2){displayCarRentalMenu(scanner, database,  traveler, bookingOptions.get(response-1));}
-            else if(response == 3){}
-            else if(response == 4){}
-            else if(response == 5){traveler.addActivityToSchedule(activity, estimate);}
-            else if(response == 6){System.out.println(estimate.provideEstimate());}
-            else if(response == 7){EXIT = true;}
+            else if(response == 3){traveler.addActivityToSchedule(activity, estimate);}
+            else if(response == 4){System.out.println(estimate.provideEstimate());}
+            else if(response == 5){schedule.printSchedule(); System.out.println();}
+            else if(response == 6){EXIT = true;}
             else
                 System.out.println("Error: try again");
 
@@ -259,7 +258,7 @@ public class TravelProgram{
     }
 
 
-    public static TravelerAccount loginToTravelerAccount(TravelerAccount travelerAccount, Database database, Scanner scanner) {
+   public static TravelerAccount loginToTravelerAccount(TravelerAccount travelerAccount, Database database, Scanner scanner) {
         String email;
         String password;
         int numberOfSignInAttempts = 0;
@@ -272,9 +271,13 @@ public class TravelProgram{
         System.out.println("*********************");
         System.out.println();
         do {
+            System.out.println("If you do not have an account type 0 next to email");
             System.out.print("\tEmail: ");
             email = scanner.nextLine();
 
+            if(email.equals("0")){
+                return null;
+            } else{
             System.out.print("\tPassword: ");
             password = scanner.nextLine();
 
@@ -300,7 +303,8 @@ public class TravelProgram{
                         System.out.println("Invalid input enter either 1=yes, 2=no.");
                     }
             }
-*/
+            }
+*/          }
         }while(!validEntry);
         System.out.println("Login Successful!");
         return travelerAccount;
