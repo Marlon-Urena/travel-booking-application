@@ -1,11 +1,13 @@
 import org.apache.commons.validator.routines.EmailValidator;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -23,7 +25,7 @@ public class TravelerAccount {
     private LocalDate dateOfBirth;
     private String email;
     private String password;
-    private Map<LocalDate, File> previousBookingsMap; //Possible to use keyset and store in List so that it may be organized. Booking information will be stored in json format
+    private Map<LocalDate, File> previousBookingsMap= new HashMap<>(); //Possible to use keyset and store in List so that it may be organized. Booking information will be stored in json format
     static String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
     private SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -38,7 +40,6 @@ public class TravelerAccount {
     }
 
     public static boolean isNewTravelerAccountValid(String email, String password) {
-
         EmailValidator validator= EmailValidator.getInstance();
 
         if (validator.isValid(email) && password.matches(pattern)) {
@@ -136,24 +137,33 @@ public class TravelerAccount {
         }
     }
 
-    public void saveBookingInformation(Object booking, Database database) {
+    public String saveBookingInformation(Object booking, Database database) {
         int length = 8;
         String chars = "0123456789";
-        String bookingNumber = new Random().ints(length, 0, chars.length())
-                .mapToObj(i -> "" + chars.charAt(i))
-                .collect(Collectors.joining());
+        String bookingNumber;
+        String todayString;
+        do {
+            bookingNumber = new Random().ints(length, 0, chars.length())
+                    .mapToObj(i -> "" + chars.charAt(i))
+                    .collect(Collectors.joining());
+        }while(database.searchOldBookingData(bookingNumber)==null);
 
         new File(System.getProperty("user.home"), "travel").mkdirs();
-        File filePath = new File(System.getProperty("user.home" + File.separator + "travel" + File.separator + bookingNumber + "-flightBooking.json" ));
+        String newFileName = (bookingNumber + "-" + "travelBooking.json");
+        File filePath = new File(System.getProperty("user.home") + File.separator + "travel" + File.separator + newFileName );
 
-        database.addNewBookingData(bookingNumber, filePath);
-
-        LocalDate today = LocalDate.now();
-
-        previousBookingsMap.put(today,filePath);
-
+        try {
+            database.addNewBookingData(bookingNumber, filePath, booking);
+            LocalDate today = LocalDate.now();
 
 
+            this.previousBookingsMap.put(today, filePath);
+
+            return bookingNumber;
+        }
+        catch (IOException e) {
+            return "Unable to save booking information, we apologise for the inconvenience.";
+        }
     }
 }
 
