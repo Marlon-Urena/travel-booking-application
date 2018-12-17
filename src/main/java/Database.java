@@ -1,5 +1,11 @@
+import com.fasterxml.jackson.databind.ObjectMapper;
+import models.flight.FlightSearch;
+import org.apache.commons.io.FileUtils;
+
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,7 +21,7 @@ public class Database {
         userMap.remove(email);
     }
 
-    public TravelerAccount loginToTravelerAccount(String login) throws Exception, RuntimeException {
+    public TravelerAccount loginToTravelerAccount(String login) throws Exception {
         String inputEmail;
         String inputPassword;
         boolean successfulLogin = false;
@@ -42,16 +48,33 @@ public class Database {
         return userMap.get(travelerAccount.getEmail());
     }
 
-    public void addNewBookingData(String bookingNumber, File bookingFile) {
+    public void addNewBookingData(String bookingNumber, File filePath, Object booking) throws IOException{
     /*Have to rethink how I am going to implement. May need to add an additional parameter for JSON resource that we get
     through api. May consider have private method that creates a folder and saves JSON file
      */
-
-    bookingMap.put(bookingNumber, bookingFile);
+        FileUtils.writeStringToFile(filePath, booking.toString(), "UTF-8");
+        bookingMap.put(bookingNumber, filePath);
 
     }
+    public boolean  isBookingNumberInSystem (String bookingNumber) {
+        if (bookingMap.get(bookingNumber)== null) { return false;}
 
-    public File searchOldBookingData(String bookingNumber){
-        return bookingMap.get(bookingNumber);
+        return true;
+    }
+    public Object searchOldBookingData(String bookingNumber){
+        if (this.isBookingNumberInSystem(bookingNumber)) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                Object flight = objectMapper.readValue(bookingMap.get(bookingNumber), Object.class);
+                return flight.toString();
+            } catch (IOException e) {
+                Object notFoundMessage = "Unable to located booking info.";
+                return notFoundMessage;
+            }
+        }
+        Object bookingNumberNotInSystem= new Object();
+
+        return bookingNumberNotInSystem = "No booking found with booking number: " + bookingNumber;
+
     }
 }

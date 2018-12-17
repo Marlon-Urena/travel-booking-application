@@ -4,21 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/Database.java" line="76" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8c8a838-92da-489a-a589-b84c2a95ad6a" name="Default Changelist" comment="Finished creating test for CarRentalBookingTest">
+    <list default="true" id="d8c8a838-92da-489a-a589-b84c2a95ad6a" name="Default Changelist" comment="Tweaked return type for makeRequest and sea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarRentalBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRentalBooking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FlightBooking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HotelBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HotelBooking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TrainBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TrainBooking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TravelProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TravelProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Traveler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Traveler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TravelerAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TravelerAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/LowFareSearchResponse" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CarRentalBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CarRentalBookingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FlightBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FlightBookingTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,7 +60,7 @@
           <entry key="dummy" value="1" />
           <entry key="java" value="21101" />
           <entry key="json" value="3" />
-          <entry key="txt" value="1719" />
+          <entry key="txt" value="1982" />
           <entry key="xml" value="21" />
         </counts>
       </usages-collector>
@@ -77,7 +68,7 @@
         <counts>
           <entry key="JAVA" value="21101" />
           <entry key="JSON" value="8" />
-          <entry key="PLAIN_TEXT" value="1720" />
+          <entry key="PLAIN_TEXT" value="1983" />
           <entry key="XML" value="21" />
         </counts>
       </usages-collector>
@@ -94,7 +85,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Traveler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1555">
@@ -172,10 +163,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TravelProgram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
+            <state relative-caret-position="-260">
               <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
               <folding>
                 <element signature="e#11522#11523#0" expanded="true" />
@@ -336,7 +327,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545075976205" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545076194383" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/travel-booking-application" />
@@ -564,7 +555,28 @@
       <option name="project" value="LOCAL" />
       <updated>1545016171582</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Edited Booking classes to make it easier to test if a search request has failed.">
+      <created>1545076054442</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1545076054442</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Edited to support exceptions thrown from TravelerProgram, same as other booking classes">
+      <created>1545076120493</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1545076120493</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Tweaked return type for makeRequest and retrieveBookingInfo method">
+      <created>1545076225541</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1545076225541</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -688,7 +700,10 @@
     <MESSAGE value="I think we are nearly complete with this. I have to see if I can make use of the Estimate, Budget, and Schedule classes in the booking classes." />
     <MESSAGE value="Edited classes to make it easier to run test. Made it so apicaller is being injected into booking classes." />
     <MESSAGE value="Finished creating test for CarRentalBookingTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished creating test for CarRentalBookingTest" />
+    <MESSAGE value="Edited Booking classes to make it easier to test if a search request has failed." />
+    <MESSAGE value="Edited to support exceptions thrown from TravelerProgram, same as other booking classes" />
+    <MESSAGE value="Tweaked return type for makeRequest and retrieveBookingInfo method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweaked return type for makeRequest and retrieveBookingInfo method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1077,23 +1092,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TravelProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-260">
+          <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
+          <folding>
+            <element signature="e#11522#11523#0" expanded="true" />
+            <element signature="e#11549#11550#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Traveler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1555">
           <caret line="58" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TravelProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
-          <folding>
-            <element signature="e#11522#11523#0" expanded="true" />
-            <element signature="e#11549#11550#0" expanded="true" />
           </folding>
         </state>
       </provider>
