@@ -55,8 +55,9 @@ public class Traveler {
             }while (!validDates);
         }
 
-        public void makeRequest(Object booking, Database database) {
-            travelerAccount.saveBookingInformation(booking,database);
+        public String makeRequest(Object booking, Database database) {
+           return travelerAccount.saveBookingInformation(booking,database);
+
         }
 
         public boolean addActivityToSchedule(Activity activity, Estimate estimate){
@@ -156,8 +157,9 @@ public class Traveler {
             }
         }
 
-        public void retrieveBookingInfo(Database database, String bookingNumber) {
-            database.searchOldBookingData(bookingNumber);
+        public Object retrieveBookingInfo(Database database, String bookingNumber) {
+
+            return database.searchOldBookingData(bookingNumber);
         }
 
         public boolean login(TravelerAccount travelerAccount) {
