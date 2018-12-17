@@ -146,7 +146,7 @@ public class TravelerAccount {
             bookingNumber = new Random().ints(length, 0, chars.length())
                     .mapToObj(i -> "" + chars.charAt(i))
                     .collect(Collectors.joining());
-        }while(database.searchOldBookingData(bookingNumber)==null);
+        }while(database.isBookingNumberInSystem(bookingNumber)==false);
 
         new File(System.getProperty("user.home"), "travel").mkdirs();
         String newFileName = (bookingNumber + "-" + "travelBooking.json");

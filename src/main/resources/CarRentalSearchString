@@ -1,15 +1,15 @@
 ******************** Car Rental Result *********************
 ***[Car Rental]*********************************************
-Car Category: (Special)
+Car Category: (Intermediate)
 
-Vehicle Type: (Special)
-Fuel Type: (Special)
-Air Conditioning: (null)
+Vehicle Type: (Crossover)
+Fuel Type: (Crossover)
+Air Conditioning: (true)
 
 Pick Up Location: (SFO)
-Company Name: (THRIFTY)
-Company Code: (ZT)
+Company Name: (NATIONAL)
+Company Code: (ZL)
 ************************************************************
-(WEEKLY) Price: (84.64) (USD)
-Estimated Total Price: (172.94) (USD)
+(WEEKLY) Price: (1299.99) (USD)
+Estimated Total Price: (2481.10) (USD)
 ************************************************************

@@ -182,6 +182,8 @@ public class FlightSearch {
         if(!(pricePerInfant == null)) {
             sb.append("Price per infant: " + pricePerInfant.toString() + " " + currency + "\n" );
         }
+        sb.append("[Total Price] = " + fare.getTotalPrice()+ " " + currency + "\n");
+
         return sb.toString();
     }
 

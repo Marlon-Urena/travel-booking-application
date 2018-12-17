@@ -1,6 +1,7 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import models.flight.FlightSearch;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -65,8 +66,8 @@ public class Database {
         if (this.isBookingNumberInSystem(bookingNumber)) {
             ObjectMapper objectMapper = new ObjectMapper();
             try {
-                Object flight = objectMapper.readValue(bookingMap.get(bookingNumber), Object.class);
-                return flight.toString();
+                String bookingFile = IOUtils.toString(bookingMap.get(bookingNumber).toURI(), "UTF-8");
+                return bookingFile;
             } catch (IOException e) {
                 Object notFoundMessage = "Unable to located booking info.";
                 return notFoundMessage;
@@ -75,6 +76,6 @@ public class Database {
         Object bookingNumberNotInSystem= new Object();
 
         return bookingNumberNotInSystem = "No booking found with booking number: " + bookingNumber;
-
     }
+
 }

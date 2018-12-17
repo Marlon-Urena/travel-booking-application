@@ -202,15 +202,12 @@ public class TravelProgram{
 
         }
         catch (ApiException e) {
-            String responseString = e.getResponseBody();
-            if (responseString != null) {
-                int beginLoc = responseString.indexOf("message") + 12;
-                int endLoc = responseString.indexOf("\"\n}");
-                String exceptionErrorMessage = responseString.substring(beginLoc, endLoc);
-                System.out.println(exceptionErrorMessage);
+            if (e.getResponseBody() == null) {
+                System.out.println("ERROR: Unable to connect to travel system. Please try later.");
             }
-            System.out.println("Unable to connect to flight system. Please try later.");
-
+            else {
+               System.out.println(e.getResponseBody());
+            }
         }
 
         //traveler.makeRequest(flightOptions.get(selection-1)); //Will request the selected booking but will check to see if it fits within Traveler's budget
@@ -247,18 +244,10 @@ public class TravelProgram{
             traveler.makeRequest(carRentalOptions.get(selection), database);
             scanner.nextLine();
         }catch (ApiException e) {
-            String responseString = e.getResponseBody();
-            if (responseString != null) {
-                int beginLoc = responseString.indexOf("message") + 12;
-                int endLoc = responseString.indexOf("\"\n}");
-                String exceptionErrorMessage = responseString.substring(beginLoc, endLoc);
-                System.out.println(exceptionErrorMessage);
-
+            if (e.getResponseBody() == null) {
+                System.out.println("ERROR: Unable to connect to travel system. Please try later.");
             }
-            System.out.println("Unable to connect to flight system. Please try later.");
         }
-
-
     }
    
     public static void displayAccountInformationMenu(Scanner scanner, Traveler traveler) {

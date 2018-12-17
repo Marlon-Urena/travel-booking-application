@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/Database.java" line="76" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/Database.java" line="77" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8c8a838-92da-489a-a589-b84c2a95ad6a" name="Default Changelist" comment="Tweaked return type for makeRequest and sea">
+    <list default="true" id="d8c8a838-92da-489a-a589-b84c2a95ad6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CarRentalSearchString3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TravelProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TravelProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TravelerAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TravelerAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/flight/FlightSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/flight/FlightSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CarRentalSearchString" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CarRentalSearchString" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CarRentalSearchString(1)" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CarRentalSearchString(1)" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CarRentalBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CarRentalBookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FlightBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FlightBookingTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,6 +22,79 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/test/java/FlightBookingTest.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="391">
+                    <caret line="31" selection-start-line="31" selection-end-line="32" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.6/commons-io-2.6-sources.jar!/org/apache/commons/io/IOUtils.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="-15008">
+                    <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/Database.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="816">
+                    <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/FlightBooking.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="173">
+                    <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/test/java/CarRentalBookingTest.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="510">
+                    <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/TravelProgram.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="340">
+                    <caret line="78" selection-start-line="78" selection-end-line="78" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1699970360">
@@ -32,22 +113,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="CarRentalSearchString" value="10" />
-          <entry key="CarRentalSearchString(1)" value="1" />
+          <entry key="CarRentalSearchString" value="11" />
+          <entry key="CarRentalSearchString(1)" value="2" />
+          <entry key="CarRentalSearchString3" value="1" />
           <entry key="LowFareSearchResponse" value="5" />
           <entry key="LowFareSearchString" value="6" />
-          <entry key="class" value="40" />
-          <entry key="java" value="158" />
+          <entry key="class" value="44" />
+          <entry key="java" value="176" />
           <entry key="json" value="8" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="40" />
-          <entry key="JAVA" value="158" />
-          <entry key="JSON" value="29" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="CLASS" value="44" />
+          <entry key="JAVA" value="176" />
+          <entry key="JSON" value="30" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
@@ -55,17 +137,17 @@
         <counts>
           <entry key="LowFareSearchResponse" value="5" />
           <entry key="dummy" value="1" />
-          <entry key="java" value="21134" />
+          <entry key="java" value="21591" />
           <entry key="json" value="3" />
-          <entry key="txt" value="2278" />
+          <entry key="txt" value="2310" />
           <entry key="xml" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="21134" />
+          <entry key="JAVA" value="21591" />
           <entry key="JSON" value="8" />
-          <entry key="PLAIN_TEXT" value="2279" />
+          <entry key="PLAIN_TEXT" value="2311" />
           <entry key="XML" value="21" />
         </counts>
       </usages-collector>
@@ -85,108 +167,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Traveler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-841">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="168">
+              <caret line="161" selection-start-line="161" selection-end-line="161" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/FlightBookingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/CarRentalBookingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DatabaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TravelerAccountTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DefaultApiMock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/EstimateTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-93">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/TravelProgram.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TravelerAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="199" column="31" lean-forward="true" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="31" />
+            <state relative-caret-position="404">
+              <caret line="148" column="69" selection-start-line="148" selection-start-column="69" selection-end-line="148" selection-end-column="69" />
               <folding>
-                <element signature="e#11522#11523#0" expanded="true" />
-                <element signature="e#11549#11550#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ActivityTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BudgetTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -223,24 +220,25 @@
         <option value="$PROJECT_DIR$/src/test/java/LowFareFlightSearchMock.java" />
         <option value="$PROJECT_DIR$/src/main/resources/LowFareSearchResponse" />
         <option value="$PROJECT_DIR$/src/main/resources/LowFareSearchResponse.json" />
-        <option value="$PROJECT_DIR$/src/main/java/models/flight/FlightSearch.java" />
         <option value="$PROJECT_DIR$/src/main/resources/CarRentalSearchResponse.json" />
         <option value="$PROJECT_DIR$/src/main/java/models/carrental/CarRentalSearch.java" />
         <option value="$PROJECT_DIR$/src/test/java/DefaultApiMock.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/CarRentalSearchString" />
-        <option value="$PROJECT_DIR$/src/main/resources/CarRentalSearchString(1)" />
         <option value="$PROJECT_DIR$/src/main/java/TrainBooking.java" />
         <option value="$PROJECT_DIR$/src/main/java/HotelBooking.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Traveler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TravelerAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/Booking.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FlightBooking.java" />
         <option value="$PROJECT_DIR$/src/main/java/CarRentalBooking.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FlightBooking.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TravelProgram.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/flight/FlightSearch.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/CarRentalSearchString3" />
+        <option value="$PROJECT_DIR$/src/main/resources/CarRentalSearchString" />
+        <option value="$PROJECT_DIR$/src/main/resources/CarRentalSearchString(1)" />
+        <option value="$PROJECT_DIR$/src/main/java/Database.java" />
         <option value="$PROJECT_DIR$/src/test/java/FlightBookingTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/CarRentalBookingTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TravelProgram.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TravelerAccount.java" />
       </list>
     </option>
   </component>
@@ -263,9 +261,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1261" />
-    <option name="width" value="666" />
-    <option name="height" value="1047" />
+    <option name="x" value="-1928" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -303,6 +302,30 @@
               <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
               <item name="travel-booking-application" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travel-booking-application" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="flight" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travel-booking-application" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travelbooking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travel-booking-application" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -324,7 +347,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545076381308" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545087346436" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/travel-booking-application" />
@@ -355,19 +378,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TravelerAccountTest">
-    <configuration name="CarRentalBookingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.TravelProgram">
+    <configuration name="TravelProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TravelProgram" />
       <module name="travelbooking" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarRentalBookingTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarRentalBookingTest.provideOptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="travelbooking" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="MAIN_CLASS_NAME" value="CarRentalBookingTest" />
+      <option name="METHOD_NAME" value="provideOptions" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -399,19 +423,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CarRentalBookingTest" />
-      <item itemvalue="JUnit.DatabaseTest" />
       <item itemvalue="JUnit.EstimateTest" />
       <item itemvalue="JUnit.FlightBookingTest.successfullyReturnStringItinerary" />
       <item itemvalue="JUnit.TravelerAccountTest" />
+      <item itemvalue="Application.TravelProgram" />
+      <item itemvalue="JUnit.CarRentalBookingTest.provideOptions" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TravelerAccountTest" />
+        <item itemvalue="Application.TravelProgram" />
+        <item itemvalue="JUnit.CarRentalBookingTest.provideOptions" />
         <item itemvalue="JUnit.FlightBookingTest.successfullyReturnStringItinerary" />
+        <item itemvalue="JUnit.TravelerAccountTest" />
         <item itemvalue="JUnit.EstimateTest" />
-        <item itemvalue="JUnit.DatabaseTest" />
-        <item itemvalue="JUnit.CarRentalBookingTest" />
       </list>
     </recent_temporary>
   </component>
@@ -587,39 +611,46 @@
       <option name="project" value="LOCAL" />
       <updated>1545076499580</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Tweaked a bunch of things">
+      <created>1545076652493</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1545076652493</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TravelerAccountTest - 2018.12.16 at 22h 56m 27s.xml">
-      <configuration name="TravelerAccountTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlightBookingTest_successfullyReturnStringItinerary - 2018.12.17 at 14h 37m 50s.xml">
+    <history-entry file="FlightBookingTest_successfullyReturnStringItinerary - 2018.12.17 at 16h 49m 22s.xml">
       <configuration name="FlightBookingTest.successfullyReturnStringItinerary" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarRentalBookingTest_provideOptions - 2018.12.17 at 14h 37m 59s.xml">
+    <history-entry file="FlightBookingTest_successfullyReturnStringItinerary - 2018.12.17 at 16h 50m 45s.xml">
+      <configuration name="FlightBookingTest.successfullyReturnStringItinerary" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlightBookingTest_successfullyReturnStringItinerary - 2018.12.17 at 16h 52m 55s.xml">
+      <configuration name="FlightBookingTest.successfullyReturnStringItinerary" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CarRentalBookingTest_provideOptions - 2018.12.17 at 16h 56m 35s.xml">
       <configuration name="CarRentalBookingTest.provideOptions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ActivityTest - 2018.12.17 at 14h 39m 15s.xml">
-      <configuration name="ActivityTest" configurationId="JUnit" />
+    <history-entry file="CarRentalBookingTest_provideOptions - 2018.12.17 at 16h 58m 03s.xml">
+      <configuration name="CarRentalBookingTest.provideOptions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BudgetTest - 2018.12.17 at 14h 39m 21s.xml">
-      <configuration name="BudgetTest" configurationId="JUnit" />
+    <history-entry file="CarRentalBookingTest_provideOptions - 2018.12.17 at 17h 09m 17s.xml">
+      <configuration name="CarRentalBookingTest.provideOptions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarRentalBookingTest - 2018.12.17 at 14h 39m 33s.xml">
-      <configuration name="CarRentalBookingTest" configurationId="JUnit" />
+    <history-entry file="CarRentalBookingTest_provideOptions - 2018.12.17 at 17h 14m 19s.xml">
+      <configuration name="CarRentalBookingTest.provideOptions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DatabaseTest - 2018.12.17 at 14h 39m 37s.xml">
-      <configuration name="DatabaseTest" configurationId="JUnit" />
+    <history-entry file="CarRentalBookingTest_provideOptions - 2018.12.17 at 17h 18m 19s.xml">
+      <configuration name="CarRentalBookingTest.provideOptions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EstimateTest - 2018.12.17 at 14h 39m 49s.xml">
-      <configuration name="EstimateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlightBookingTest_successfullyReturnStringItinerary - 2018.12.17 at 14h 39m 58s.xml">
+    <history-entry file="FlightBookingTest_successfullyReturnStringItinerary - 2018.12.17 at 17h 28m 51s.xml">
       <configuration name="FlightBookingTest.successfullyReturnStringItinerary" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TravelerAccountTest - 2018.12.17 at 14h 40m 02s.xml">
-      <configuration name="TravelerAccountTest" configurationId="JUnit" />
+    <history-entry file="CarRentalBookingTest_provideOptions - 2018.12.17 at 17h 30m 13s.xml">
+      <configuration name="CarRentalBookingTest.provideOptions" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -632,10 +663,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.09541578" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.14765458" />
       <window_info id="Structure" order="1" sideWeight="0.50161815" side_tool="true" weight="0.14232409" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -644,8 +675,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.50161815" side_tool="true" weight="0.14232409" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49840087" weight="0.329718" />
@@ -663,7 +694,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.14712153" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.09541578" />
       <window_info id="Structure" order="1" sideWeight="0.50161815" side_tool="true" weight="0.14232409" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -717,7 +748,8 @@
     <MESSAGE value="Tweaked return type for makeRequest and retrieveBookingInfo method" />
     <MESSAGE value="Fixed issue where booking files weren't actually being saved. Also resolved issue where we couldn't search a booking file" />
     <MESSAGE value="Changed saveBookingInformation method to support saving a copy of the path to the file in a map. Useless now since the user can type a booking number" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed saveBookingInformation method to support saving a copy of the path to the file in a map. Useless now since the user can type a booking number" />
+    <MESSAGE value="Tweaked a bunch of things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweaked a bunch of things" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -740,29 +772,22 @@
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Database.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/FlightBookingTest.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/flight/Result.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/carrental/Image.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/flight/Flight.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/carrental/Result.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/LowFareFlightSearchMockTest.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-java-client/1.0.0/swagger-java-client-1.0.0-sources.jar!/io/swagger/client/api/DefaultApi.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -866,57 +891,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.3.1/junit-platform-engine-1.3.1.jar!/org/junit/platform/engine/support/hierarchical/ThrowableCollector.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/CarRentalSearchString">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/CarRentalSearchResponse.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="208" column="1" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/CarRentalSearchString(1)">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.3.1/junit-jupiter-engine-5.3.1.jar!/org/junit/jupiter/engine/descriptor/TestMethodTestDescriptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="237" selection-start-line="237" selection-end-line="237" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TrainBooking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -980,37 +958,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="76" column="99" selection-start-line="76" selection-start-column="99" selection-end-line="76" selection-end-column="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Booking.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="86" selection-start-line="7" selection-start-column="86" selection-end-line="7" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/flight/FlightSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FlightBooking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1028,16 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TravelerAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ActivityTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1049,13 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CarRentalBookingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1086,16 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FlightBookingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TravelerAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1106,10 +1030,126 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TrainBooking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/IntFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.6/commons-io-2.6-sources.jar!/org/apache/commons/io/IOUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15008">
+          <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.3.1/junit-jupiter-engine-5.3.1.jar!/org/junit/jupiter/engine/descriptor/TestMethodTestDescriptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.3.1/junit-platform-engine-1.3.1.jar!/org/junit/platform/engine/support/hierarchical/ThrowableCollector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CarRentalSearchString3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CarRentalSearchString">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CarRentalSearchString(1)">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/flight/FlightSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="182" column="97" selection-start-line="182" selection-start-column="97" selection-end-line="182" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.3.1/junit-jupiter-engine-5.3.1.jar!/org/junit/jupiter/engine/execution/ExecutableInvoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="237" selection-start-line="237" selection-end-line="237" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FlightBookingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" selection-start-line="31" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CarRentalBookingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FlightBooking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Traveler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-841">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="168">
+          <caret line="161" selection-start-line="161" selection-end-line="161" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1118,11 +1158,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TravelProgram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="199" column="31" lean-forward="true" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="31" />
+        <state relative-caret-position="340">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
           <folding>
-            <element signature="e#11522#11523#0" expanded="true" />
-            <element signature="e#11549#11550#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TravelerAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="148" column="69" selection-start-line="148" selection-start-column="69" selection-end-line="148" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
