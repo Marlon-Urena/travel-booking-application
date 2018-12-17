@@ -36,7 +36,7 @@ public class TravelProgram{
 
         bookingOptions.add(flightBooking);
         bookingOptions.add(carRentalBooking);
-
+        boolean budgetSet = false;
         boolean signedIn = false;
 
         Scanner scanner = new Scanner(System.in);
@@ -63,10 +63,12 @@ public class TravelProgram{
 
                 switch (selection) {
                     case CREATE_BOOKING:{
-                        System.out.print("Set budget for your trip: ");
-                        double tripBudget = scanner.nextDouble();
-                        traveler.setBudget(tripBudget); //I can use the budget for trips
-
+                        if (!budgetSet) {
+                            System.out.print("Set budget for your trip: ");
+                            double tripBudget = scanner.nextDouble();
+                            traveler.setBudget(tripBudget);//I can use the budget for trips
+                            budgetSet = true;
+                        }
                         displayBookingMenu(scanner, database, traveler, bookingOptions, estimate, activity);
                     }
 
@@ -82,6 +84,7 @@ public class TravelProgram{
                         break;
                     case LOG_OUT: {
                         traveler = logOut();
+                        budgetSet = false;
                     }
                     default:
                         selection = EXIT;
@@ -192,7 +195,7 @@ public class TravelProgram{
         try {
             flightOptions = flightBooking.provideOptions(searchParams); // Change implementation to check to see if an error has occurred and give user option to not decide on anything. We can do if statement to test for 0 to exit and out of bounds number to retry input
             for (int i = 0; i < flightOptions.size(); i++) {
-                System.out.println("\n\nItinerary #" + i + 1);
+                System.out.println("\n\nItinerary #" + i+1);
                 System.out.println(flightOptions.get(i));
             }
             System.out.print("Enter the number next to your desired itinerary: ");
@@ -236,12 +239,12 @@ public class TravelProgram{
             carRentalOptions = carRentalBooking.provideOptions(searchParams);
 
             for (int i = 0; i < carRentalOptions.size(); i++) {
-                System.out.println("Option #" + i + 1);
+                System.out.println("Option #" + i+1);
                 System.out.println(carRentalOptions.get(i));
             }
-            System.out.println("Enter the number next to your desired option: ");
+            System.out.print("Enter the number next to your desired option: ");
             selection = scanner.nextInt();
-            traveler.makeRequest(carRentalOptions.get(selection), database);
+            System.out.println("Your Booking Number is: " + traveler.makeRequest(carRentalOptions.get(selection), database));
             scanner.nextLine();
         }catch (ApiException e) {
             if (e.getResponseBody() == null) {
