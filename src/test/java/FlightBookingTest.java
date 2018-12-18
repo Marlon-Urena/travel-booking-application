@@ -1,57 +1,118 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
 import io.swagger.client.ApiException;
 import io.swagger.client.api.DefaultApi;
 import io.swagger.client.model.LowFareSearchResponse;
-
-import models.flight.Fare;
-import models.flight.FlightSearch;
-import models.flight.Inbound;
-import models.flight.Outbound;
-import org.json.JSONArray;
-import org.json.JSONObject;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class FlightBookingTest {
+    @DisplayName("Test that exception will be thrown instead of itinerary being received")
     @Test
-    void receiveRequest() {
+    void unsuccessfullyReceiveItinerary() {
+        DefaultApi mockInstance = new FailingDefaultApiMock();
+        Booking flightBooking = new FlightBooking(mockInstance);
+        List<String> listOfNothing = new ArrayList<>();
+        boolean exceptionThrown = false;
+
+        for (int i = 0; i < 15; i++){
+            listOfNothing.add(null);
+        }
+        try {
+            flightBooking.provideOptions(listOfNothing);
+        }
+        catch (ApiException e) {
+            exceptionThrown = true;
+            assertTrue(exceptionThrown);
+        }
+        assertTrue(exceptionThrown);
     }
 
-    @DisplayName("Verify that we can successfully receive a nice string response")
+    @DisplayName("Test that itinerary will be returned")
     @Test
-    void successfullyReturnStringItinerary() {
+    void successfullyReceiveItinerary() {
+    DefaultApi mockInstance = new WorkingDefaultApiMock();
+    Booking flightBooking = new FlightBooking(mockInstance);
+    List<String> listOfNothing = new ArrayList<>();
+    boolean exceptionThrown = false;
+
+    for (int i = 0; i < 15; i++){
+        listOfNothing.add(null);
+    }
+    try {
+        flightBooking.provideOptions(listOfNothing);
+    }
+    catch (ApiException e) {
+            exceptionThrown = true;
+            assertFalse(exceptionThrown);
+    }
+    assertFalse(exceptionThrown);
+    }
+
+    @DisplayName("Test that we will receive an exception from api")
+    @Test
+    void receiveExceptionFromApi() {
+        boolean exceptionThrown = false;
         try {
-            DefaultApi mockInstance = new DefaultApiMock();
-            Booking flightBooking = new FlightBooking(mockInstance);
+            String apiKey = null;
+            String origin = null;
+            String destination = null;
+            String departure_date = null;
+            String return_date = null;
+            String arrive_by = null;
+            String return_by = null;
+            Integer adults = null;
+            Integer children = null;
+            Integer infants = null;
+            List<String> include_airlines = null;
+            List<String> exclude_airlines = null;
+            Boolean nonstop = null;
+            Integer max_price = null;
+            String currency = null;
+            String travelClass = null;
+            Integer number_of_results = null;
+            DefaultApi mockInstance = new FailingDefaultApiMock();
 
-            List<String> listOfNothing = new ArrayList<>();
-            for (int i = 0; i < 15; i++)
-                listOfNothing.add(null);
+            LowFareSearchResponse lowFareSearchResponse = mockInstance.flightLowFareSearch(apiKey, origin, destination, departure_date, return_date, arrive_by, return_by, adults, children, infants, include_airlines, exclude_airlines, nonstop, max_price, currency,travelClass,number_of_results);
+        }catch (ApiException e) {
+            exceptionThrown = true;
+            assertTrue(exceptionThrown);
+        }
+        assertTrue(exceptionThrown);
+    }
 
-            List<Object> listOfOptions = flightBooking.provideOptions(listOfNothing);
+    @DisplayName("Test that we will receive a response from api")
+    @Test
+    void successfullyReceiveResponseFromApi() {
+        boolean exceptionThrown = false;
+        try {
+            String apiKey = null;
+            String origin = null;
+            String destination = null;
+            String departure_date = null;
+            String return_date = null;
+            String arrive_by = null;
+            String return_by = null;
+            Integer adults = null;
+            Integer children = null;
+            Integer infants = null;
+            List<String> include_airlines = null;
+            List<String> exclude_airlines = null;
+            Boolean nonstop = null;
+            Integer max_price = null;
+            String currency = null;
+            String travelClass = null;
+            Integer number_of_results = null;
+            DefaultApi mockInstance = new WorkingDefaultApiMock();
 
-            String responsePath = ("src" + File.separator + "main" + File.separator + "resources" + File.separator + "LowFareSearchString");
-            File file = new File(responsePath).getAbsoluteFile();
-            boolean successful = false;
-
-            ObjectMapper objectMapper = new ObjectMapper();
-            FlightSearch searchString = objectMapper.readValue(file, FlightSearch.class);
-            assertEquals(searchString, listOfOptions.get(0));
-
-
-         }catch (ApiException e) {
-
-         }catch (IOException e) {
-         }
+            LowFareSearchResponse lowFareSearchResponse = mockInstance.flightLowFareSearch(apiKey, origin, destination, departure_date, return_date, arrive_by, return_by, adults, children, infants, include_airlines, exclude_airlines, nonstop, max_price, currency,travelClass,number_of_results);
+        }catch (ApiException e) {
+            exceptionThrown = true;
+            assertFalse(exceptionThrown);
+        }
+        assertFalse(exceptionThrown);
     }
 }

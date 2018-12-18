@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
-public class DefaultApiMock extends io.swagger.client.api.DefaultApi {
+public class WorkingDefaultApiMock extends io.swagger.client.api.DefaultApi {
         @Override
         public CarSearchResponse carRentalAirportSearch(String apikey, String location, String pickUp, String dropOff, String lang, String currency, String provider, String rateClass, String ratePlan, String rateFilter, List<String> vehicle) throws ApiException {
             String responsePath = ("src" + File.separator + "main" + File.separator + "resources" + File.separator + "CarRentalSearchResponse.json");
@@ -41,5 +41,4 @@ public class DefaultApiMock extends io.swagger.client.api.DefaultApi {
                 }
                 return null;
         }
-
 }
