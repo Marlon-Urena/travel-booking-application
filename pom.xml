@@ -27,6 +27,12 @@
             <artifactId>commons-io</artifactId>
             <version>2.6</version>
         </dependency>
+             
+        <dependency>
+            <groupId>com.clever</groupId>
+            <artifactId>client</artifactId>
+            <version>0.3.4</version>
+        </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
