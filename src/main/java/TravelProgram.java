@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-
 public class TravelProgram{
     private static final int CREATE_BOOKING = 1;
     private static final int SEARCH_BOOKING = 2;
@@ -29,9 +28,8 @@ public class TravelProgram{
         Traveler traveler = new Traveler(schedule, budget);
 
         Booking flightBooking = new FlightBooking(apiInstance);
-        //Booking hotelBooking = new HotelBooking();
         Booking carRentalBooking = new CarRentalBooking(apiInstance);
-        //Booking trainBooking = new TrainBooking();
+
         List<Booking> bookingOptions = new ArrayList<>();
 
         bookingOptions.add(flightBooking);
@@ -41,53 +39,60 @@ public class TravelProgram{
 
         Scanner scanner = new Scanner(System.in);
 
-            int selection;
-            do {
-                while (!signedIn) {
-                    
-                    System.out.print("Hello! \nWould you like to \n 1. Login \n 2. Make a new account \nSelection: ");
-                    selection = scanner.nextInt();
-                    scanner.nextLine();
+        int selection;
+        //System.out.print("Hello! \nWould you like to \n 1. Login \n 2. Make a new account \nSelection: ");
+        //selection = scanner.nextInt();
+        //scanner.nextLine();
+        do {
+            while (!signedIn) {
 
-                    if (selection == 1) {
-                        traveler.login(loginToTravelerAccount(travelerAccount, database, scanner));
-                        signedIn = true;
-                    } else if (selection == 2) {
-                        travelerAccount = createNewTravelerAccount(travelerAccount, database, scanner);
-                        traveler.setAccountInfo(travelerAccount);
-                        traveler.login(loginToTravelerAccount(travelerAccount, database, scanner));
+                System.out.print("Would you like to \n 1. Login \n 2. Make a new account \nSelection: ");
+                selection = scanner.nextInt();
+                scanner.nextLine();
+
+                if (selection == 1) {
+                    if(traveler.login(loginToTravelerAccount(travelerAccount, database, scanner))){
                         signedIn = true;
                     }
+                    else{
+                        signedIn = false;
+                    }
+                } else if (selection == 2) {
+                    travelerAccount = createNewTravelerAccount(travelerAccount, database, scanner);
+                    traveler.setAccountInfo(travelerAccount);
+                    traveler.login(loginToTravelerAccount(travelerAccount, database, scanner));
+                    signedIn = true;
+                }
+            }
+
+            selection = displayMenu(scanner);
+
+            switch (selection) {
+                case CREATE_BOOKING:{
+                    System.out.print("Set budget for your trip: ");
+                    double tripBudget = scanner.nextDouble();
+                    traveler.setBudget(tripBudget); //I can use the budget for trips
+
+                    displayBookingMenu(scanner, database, traveler, bookingOptions, estimate, activity, schedule);
                 }
 
-                selection = displayMenu(scanner);
-
-                switch (selection) {
-                    case CREATE_BOOKING:{
-                        System.out.print("Set budget for your trip: ");
-                        double tripBudget = scanner.nextDouble();
-                        traveler.setBudget(tripBudget); //I can use the budget for trips
-
-                        displayBookingMenu(scanner, database, traveler, bookingOptions, estimate, activity);
-                    }
-
-                        break;
-                    case SEARCH_BOOKING:{
-                        System.out.print("Enter booking number: ");
-                        String bookingNum = scanner.nextLine();
-                        System.out.println(traveler.retrieveBookingInfo(database, bookingNum));
-                    }
-                        break;
-                    case CHANGE_INFO:
-                        traveler.changeAccountInfo(travelerAccount);
-                        break;
-                    case LOG_OUT: {
-                        traveler = logOut();
-                    }
-                    default:
-                        selection = EXIT;
+                break;
+                case SEARCH_BOOKING:{
+                    System.out.print("Enter booking number: ");
+                    String bookingNum = scanner.nextLine();
+                    System.out.println(traveler.retrieveBookingInfo(database, bookingNum));
                 }
-            } while (selection != EXIT);
+                break;
+                case CHANGE_INFO:
+                    traveler.changeAccountInfo(travelerAccount);
+                    break;
+                case LOG_OUT: {
+                    traveler = logOut();
+                }
+                default:
+                    selection = EXIT;
+            }
+        } while (selection != EXIT);
     }
 
     public static int displayMenu(Scanner scanner) {
@@ -114,9 +119,12 @@ public class TravelProgram{
 
         return selection;
     }
+    public static void makeNewBooking(Traveler traveler, Object booking) { //Remove
 
-    public static void displayBookingMenu(Scanner scanner, Database database, Traveler traveler, List<Booking> bookingOptions, Estimate estimate, Activity activity){
-         boolean EXIT = false;
+    }
+
+    public static void displayBookingMenu(Scanner scanner, Database database, Traveler traveler, List<Booking> bookingOptions, Estimate estimate, Activity activity, Schedule schedule){
+        boolean EXIT = false;
         do {
             System.out.println("*********************");
             System.out.println("BOOKING MENU: ");
@@ -143,7 +151,7 @@ public class TravelProgram{
                 System.out.println("Error: try again");
 
         }while(!EXIT);
-        
+
     }
     public static void displayFlightBookingMenu(Scanner scanner, Database database,  Traveler traveler, Booking flightBooking) {
         System.out.println("*********************");
@@ -198,12 +206,15 @@ public class TravelProgram{
 
         }
         catch (ApiException e) {
-            if (e.getResponseBody() == null) {
-                System.out.println("ERROR: Unable to connect to travel system. Please try later.");
+            String responseString = e.getResponseBody();
+            if (responseString != null) {
+                int beginLoc = responseString.indexOf("message") + 12;
+                int endLoc = responseString.indexOf("\"\n}");
+                String exceptionErrorMessage = responseString.substring(beginLoc, endLoc);
+                System.out.println(exceptionErrorMessage);
             }
-            else {
-               System.out.println(e.getResponseBody());
-            }
+            System.out.println("Unable to connect to flight system. Please try later.");
+
         }
 
         //traveler.makeRequest(flightOptions.get(selection-1)); //Will request the selected booking but will check to see if it fits within Traveler's budget
@@ -240,13 +251,17 @@ public class TravelProgram{
             traveler.makeRequest(carRentalOptions.get(selection), database);
             scanner.nextLine();
         }catch (ApiException e) {
-            if (e.getResponseBody() == null) {
-                System.out.println("ERROR: Unable to connect to travel system. Please try later.");
+            String responseString = e.getResponseBody();
+            if (responseString != null) {
+                int beginLoc = responseString.indexOf("message") + 12;
+                int endLoc = responseString.indexOf("\"\n}");
+                String exceptionErrorMessage = responseString.substring(beginLoc, endLoc);
+                System.out.println(exceptionErrorMessage);
+
             }
+            System.out.println("Unable to connect to flight system. Please try later.");
         }
-    }
-   
-    public static void displayAccountInformationMenu(Scanner scanner, Traveler traveler) {
+
 
     }
 
@@ -255,7 +270,7 @@ public class TravelProgram{
     }
 
 
-   public static TravelerAccount loginToTravelerAccount(TravelerAccount travelerAccount, Database database, Scanner scanner) {
+    public static TravelerAccount loginToTravelerAccount(TravelerAccount travelerAccount, Database database, Scanner scanner) {
         String email;
         String password;
         int numberOfSignInAttempts = 0;
@@ -338,7 +353,8 @@ public class TravelProgram{
                 System.out.println ("Password does not match. Please try again");
             }
         }while(!validAccountDetails);
-    return  travelerAccount;
+        return  travelerAccount;
     }
 }
+
 
