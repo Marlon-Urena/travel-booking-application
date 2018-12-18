@@ -117,9 +117,6 @@ public class TravelProgram{
 
         return selection;
     }
-    public static void makeNewBooking(Traveler traveler, Object booking) { //Remove
-
-    }
 
     public static void displayBookingMenu(Scanner scanner, Database database, Traveler traveler, List<Booking> bookingOptions, Estimate estimate, Activity activity){
          boolean EXIT = false;
