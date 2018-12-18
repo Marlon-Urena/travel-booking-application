@@ -29,7 +29,7 @@ class EstimateTest {
     @Test
     void provideEstimate() {
         Budget budget = new Budget();
-        budget.setTravelerBudget(0);
+        budget.setTravelerBudget(100);
         Estimate estimate = new Estimate(budget);
         estimate.addToTotalCost(30);
 
